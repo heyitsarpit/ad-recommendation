@@ -4,6 +4,7 @@ import RAKE
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
 from textblob import TextBlob
+import requests
 
 
 def get_video_id(url):
@@ -67,8 +68,21 @@ def check_brand_or_product(video_id):
         ]
         if len(nums) > 0:
             found_brands.append(word)
-    return found_brands
+    return list(set(found_brands))
 
+
+def match_description(URL):
+    API_KEY = "AIzaSyAPUIRfD1l2VF-NpGndoVp7sH85I5PaoR4"
+    video_id = get_video_id(URL)
+    url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={API_KEY}&part=snippet"
+    res = requests.get(url).json()
+
+    description = res['items'][0]['snippet']['description']
+    video_id = get_video_id(URL)
+
+    return check_brand_or_product(video_id)
+
+match_description("https://www.youtube.com/watch?v=s8aCPlUhXTg")
 
 def caption_keywords(URL):
     video_id = get_video_id(URL)
