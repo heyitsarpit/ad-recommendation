@@ -1,6 +1,6 @@
 from urllib.parse import urlparse
 
-import RAKE
+from rake import Rake
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
 from textblob import TextBlob
@@ -38,50 +38,50 @@ def get_captions(video_id):
 
 
 def get_key_phrases(captions, stop_list):
-    Rake = RAKE.Rake(stop_list)
-    keywords = Rake.run(captions)
+    r = Rake(stop_list)
+    keywords = r.run(captions)
 
     phrase_list = [word[0] for word in keywords if len(word[0].split(" ")) < 4]
     return phrase_list
 
 
-# def check_brand_or_product(word_list):
-#     found_brands = []
-#     data = pd.read_csv("./data/flipkart.csv", usecols=["product_name"])
-#     for word in word_list:
-#         nums = [
-#             num
-#             for num in (data["product_name"].str.find(word.capitalize()))
-#             if num > -1
-#         ]
-#         if len(nums) > 0:
-#             found_brands.append(word)
-#     return list(set(found_brands))
+def check_brand_or_product(word_list):
+    found_brands = []
+    data = pd.read_csv("./data/flipkart.csv", usecols=["product_name"])
+    for word in word_list:
+        nums = [
+            num
+            for num in (data["product_name"].str.find(word.capitalize()))
+            if num > -1
+        ]
+        if len(nums) > 0:
+            found_brands.append(word)
+    return list(set(found_brands))
 
 
-# def get_video_meta(URL):
-#     res = requests.get(URL).json()
-#     snippets = res["items"][0]["snippet"]
+def get_video_meta(URL):
+    res = requests.get(URL).json()
+    snippets = res["items"][0]["snippet"]
 
-#     description = snippets["description"].lower()
-#     title = snippets["title"].lower()
-#     tags = snippets["tags"]
-#     print(tags)
-#     return (description, title, tags)
+    description = snippets["description"].lower()
+    title = snippets["title"].lower()
+    tags = snippets["tags"]
+    print(tags)
+    return (description, title, tags)
 
 
-# def match_meta(phrase_list, meta):
-#     (description, title, tags) = meta
+def match_meta(phrase_list, meta):
+    (description, title, tags) = meta
 
-#     high_priority = []
-#     low_priority = []
-#     for phrase in phrase_list:
-#         for tag in tags:
-#             if tag.lower() in phrase:
-#                 high_priority.append(phrase)
-#             else:
-#                 low_priority.append(phrase)
-#     return list(set([*high_priority, *low_priority]))
+    high_priority = []
+    low_priority = []
+    for phrase in phrase_list:
+        for tag in tags:
+            if tag.lower() in phrase:
+                high_priority.append(phrase)
+            else:
+                low_priority.append(phrase)
+    return list(set([*high_priority, *low_priority]))
 
 
 def caption_keywords(URL):
@@ -90,7 +90,7 @@ def caption_keywords(URL):
     api_url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={API_KEY}&part=snippet"
     try:
         captions = get_captions(video_id)
-        phrase_list = get_key_phrases(captions, "./data/SmartStoplist.txt")
+        phrase_list = get_key_phrases(captions, "./data/StopList.txt")
         # brands_products = check_brand_or_product(word_list)
         # meta = get_video_meta(api_url)
         # match_meta(phrase_list, meta)
@@ -100,4 +100,4 @@ def caption_keywords(URL):
         raise Exception("Could not find captions.")
 
 
-# print(caption_keywords("https://www.youtube.com/watch?v=2xiCVNwhrDU"))
+print(caption_keywords("https://www.youtube.com/watch?v=2xiCVNwhrDU"))

@@ -10,16 +10,6 @@ import re
 import operator
 import io
 
-__all__ = [
-    "Rake",
-    "SmartStopList",
-    "FoxStopList",
-    "MySQLStopList",
-    "NLTKStopList",
-    "GoogleSearchStopList",
-    "RanksNLLongStopList",
-]
-
 
 def is_number(s):
     try:
@@ -27,48 +17,6 @@ def is_number(s):
         return True
     except ValueError:
         return False
-
-
-def SmartStopList():
-    from .stoplists import SmartStopList
-
-    return SmartStopList.words()
-
-
-def FoxStopList():
-    from .stoplists import FoxStopList
-
-    return FoxStopList.words()
-
-
-def MySQLStopList():
-    from .stoplists import MySQLStopList
-
-    return MySQLStopList.words()
-
-
-def NLTKStopList():
-    from .stoplists import NLTKStopList
-
-    return NLTKStopList.words()
-
-
-def GoogleSearchStopList():
-    from .stoplists import GoogleSearchStopList
-
-    return GoogleSearchStopList.words()
-
-
-def RanksNLLongStopList():
-    from .stoplists import RanksNLLongStopList
-
-    return RanksNLLongStopList.words()
-
-
-def RanksNLStoplist():
-    from .stoplists import RanksNLStoplist
-
-    return RanksNLStoplist.words()
 
 
 def load_stop_words(stop_word_file, regex):
@@ -100,7 +48,9 @@ def split_sentences(text):
     Utility function to return a list of sentences.
     @param text The text that must be split in to sentences.
     """
-    sentence_delimiters = re.compile(u"[.!?,-;:\t\\\\\"\\(\\)\\'\u2019\u2013]|\\s\\-\\s")
+    sentence_delimiters = re.compile(
+        u"[.!?,-;:\t\\\\\"\\(\\)\\'\u2019\u2013]|\\s\\-\\s"
+    )
     sentences = sentence_delimiters.split(text)
     return sentences
 
