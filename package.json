@@ -1,0 +1,39 @@
+{
+  "name": "advertisement",
+  "version": "1.0.0",
+  "description": "Advertisement app",
+  "main": "index.js",
+  "author": "Arpit Bharti<arpitbharti73@gmail.com>",
+  "license": "Apache-2.0",
+  "keywords": [
+    "next",
+    "react",
+    "redux",
+    "typescript",
+    "styled-components"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier --write './**/*.{ts,tsx,js,jsx,json,css,html}' --config ./.prettierrc --ignore-path ./.gitignore"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "next": "^9.3.4",
+    "nprogress": "^0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/styled-components": "^4.4.2",
+    "babel-plugin-styled-components": "^1.10.7",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  }
+}
