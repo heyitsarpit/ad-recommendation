@@ -1,3 +1,5 @@
+thing
+things
 a
 a's
 able

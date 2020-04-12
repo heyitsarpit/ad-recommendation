@@ -13,20 +13,29 @@ const AdBody = styled.div`
   justify-content: center;
 `;
 
+const Error = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  margin: 1em;
+  justify-content: center;
+`;
+
 const Wrapper: React.FC = () => {
-  const [keyWords, setKeyWords] = useState(['android', 'galaxy']);
-  const [searchUrl, setSearchUrl] = useState('https://www.youtube.com/watch?v=2xiCVNwhrDU');
+  const [keyWords, setKeyWords] = useState([]);
+  const [searchUrl, setSearchUrl] = useState('');
+  const [error, setError] = useState('')
 
   return (
     <div>
-      <Search setKeyWords={setKeyWords} searchUrl={searchUrl} setSearchUrl={setSearchUrl} />
-      {keyWords.length ? (
+      <Search setKeyWords={setKeyWords} searchUrl={searchUrl} setSearchUrl={setSearchUrl} setError={setError}/>
+      {keyWords?.length ? (
         <AdBody>
           <Video youtube_url={searchUrl} />
           <Advertisement keyWords={keyWords} />
         </AdBody>
       ) : (
-        <div />
+        <Error>{error}</Error>
       )}
     </div>
   );

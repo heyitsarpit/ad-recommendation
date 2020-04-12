@@ -10,13 +10,14 @@ import NProgress from 'nprogress';
 const searchImgPath = '/images/search.svg';
 
 interface SearchProps {
-  setKeyWords: (keys: string[]) => void;
   searchUrl: string;
+  setKeyWords: (keys: string[]) => void;
   setSearchUrl: (url: string) => void;
+  setError: (error: string) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ searchUrl, setSearchUrl, setKeyWords }) => {
-  const [url, setUrl] = useState(searchUrl)
+const Search: React.FC<SearchProps> = ({ searchUrl, setSearchUrl, setKeyWords, setError }) => {
+  const [url, setUrl] = useState(searchUrl);
 
   const doSearch = () => {
     const route = getUrl();
@@ -33,16 +34,12 @@ const Search: React.FC<SearchProps> = ({ searchUrl, setSearchUrl, setKeyWords })
       })
       .catch(err => {
         console.log(err);
+        setError('An Error Occurred.');
         NProgress.done();
       });
   };
 
-  const onQueryChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
-    if (value) {
-      setUrl(value)
-    }
-  };
-
+  const onQueryChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => setUrl(value);
   const onQuerySearch = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (url) {

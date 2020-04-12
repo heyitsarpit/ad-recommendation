@@ -26,10 +26,10 @@ def get_video_id(url):
             return o.path.split("/")[2]
         elif o.path[:3] == "/v/":
             return o.path.split("/")[2]
-    return None  # fail?
+    return None
 
 
-def getCaptions(video_id):
+def get_captions(video_id):
     res = YouTubeTranscriptApi.get_transcript(video_id)
     captions = ""
     for r in res:
@@ -37,53 +37,67 @@ def getCaptions(video_id):
     return captions
 
 
-def getKeywordList(video_id, stop_list):
+def get_key_phrases(captions, stop_list):
     Rake = RAKE.Rake(stop_list)
-    captions = getCaptions(video_id)
     keywords = Rake.run(captions)
-    return keywords
+
+    phrase_list = [word[0] for word in keywords if len(word[0].split(" ")) < 4]
+    return phrase_list
 
 
-def getFinalKeys(video_id):
-    word_list = []
-    string = ""
-    keywords = getKeywordList(video_id, "./data/SmartStoplist.txt")
-    for word in keywords:
-        string = word[0]
-        w_list = string.split(" ")
-        w_list = [w for w in w_list if len(w) >= 5]
-        word_list.extend(w_list)
-    return word_list
+# def check_brand_or_product(word_list):
+#     found_brands = []
+#     data = pd.read_csv("./data/flipkart.csv", usecols=["product_name"])
+#     for word in word_list:
+#         nums = [
+#             num
+#             for num in (data["product_name"].str.find(word.capitalize()))
+#             if num > -1
+#         ]
+#         if len(nums) > 0:
+#             found_brands.append(word)
+#     return list(set(found_brands))
 
 
-def check_brand_or_product(video_id):
-    found_brands = []
-    data = pd.read_csv("./data/flipkart.csv", usecols=["product_name"])
-    keywords = getFinalKeys(video_id)
-    for word in keywords:
-        nums = [
-            num
-            for num in (data["product_name"].str.find(word.capitalize()))
-            if num > -1
-        ]
-        if len(nums) > 0:
-            found_brands.append(word)
-    return list(set(found_brands))
+# def get_video_meta(URL):
+#     res = requests.get(URL).json()
+#     snippets = res["items"][0]["snippet"]
+
+#     description = snippets["description"].lower()
+#     title = snippets["title"].lower()
+#     tags = snippets["tags"]
+#     print(tags)
+#     return (description, title, tags)
 
 
-def match_description(URL):
-    API_KEY = "AIzaSyAPUIRfD1l2VF-NpGndoVp7sH85I5PaoR4"
-    video_id = get_video_id(URL)
-    url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={API_KEY}&part=snippet"
-    res = requests.get(url).json()
+# def match_meta(phrase_list, meta):
+#     (description, title, tags) = meta
 
-    description = res['items'][0]['snippet']['description']
-    video_id = get_video_id(URL)
+#     high_priority = []
+#     low_priority = []
+#     for phrase in phrase_list:
+#         for tag in tags:
+#             if tag.lower() in phrase:
+#                 high_priority.append(phrase)
+#             else:
+#                 low_priority.append(phrase)
+#     return list(set([*high_priority, *low_priority]))
 
-    return check_brand_or_product(video_id)
-
-match_description("https://www.youtube.com/watch?v=s8aCPlUhXTg")
 
 def caption_keywords(URL):
+    API_KEY = "AIzaSyAPUIRfD1l2VF-NpGndoVp7sH85I5PaoR4"
     video_id = get_video_id(URL)
-    return list(set(check_brand_or_product(video_id)))
+    api_url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={API_KEY}&part=snippet"
+    try:
+        captions = get_captions(video_id)
+        phrase_list = get_key_phrases(captions, "./data/SmartStoplist.txt")
+        # brands_products = check_brand_or_product(word_list)
+        # meta = get_video_meta(api_url)
+        # match_meta(phrase_list, meta)
+
+        return phrase_list
+    except:
+        raise Exception("Could not find captions.")
+
+
+# print(caption_keywords("https://www.youtube.com/watch?v=2xiCVNwhrDU"))
