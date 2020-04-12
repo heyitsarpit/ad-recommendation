@@ -66,7 +66,6 @@ def get_video_meta(URL):
     description = snippets["description"].lower()
     title = snippets["title"].lower()
     tags = snippets["tags"]
-    print(tags)
     return (description, title, tags)
 
 
@@ -100,4 +99,4 @@ def caption_keywords(URL):
         raise Exception("Could not find captions.")
 
 
-print(caption_keywords("https://www.youtube.com/watch?v=2xiCVNwhrDU"))
+# print(caption_keywords("https://www.youtube.com/watch?v=2xiCVNwhrDU"))

@@ -8,7 +8,6 @@ In M. W. Berry and J. Kogan (Eds.), Text Mining: Applications and Theory.unknown
 
 import re
 import operator
-import io
 
 
 def is_number(s):
@@ -20,7 +19,7 @@ def is_number(s):
 
 
 def load_stop_words(stop_word_file, regex):
-    with io.open(stop_word_file, encoding="utf8") as stop_word_file:
+    with open(stop_word_file, "r", encoding="utf-8") as stop_word_file:
         stop_words = re.split(regex, stop_word_file.read())
     return [
         word for word in stop_words if word not in ("", " ")
