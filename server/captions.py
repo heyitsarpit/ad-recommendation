@@ -50,7 +50,7 @@ def getFinalKeys(video_id):
     for word in keywords:
         string = word[0]
         w_list = string.split(" ")
-        w_list = [w for w in w_list if len(w) > 5]
+        w_list = [w for w in w_list if len(w) >= 5]
         word_list.extend(w_list)
     return word_list
 
@@ -72,4 +72,4 @@ def check_brand_or_product(video_id):
 
 def caption_keywords(URL):
     video_id = get_video_id(URL)
-    return check_brand_or_product(video_id)
+    return list(set(check_brand_or_product(video_id)))

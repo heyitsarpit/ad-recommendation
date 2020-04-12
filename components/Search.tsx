@@ -11,10 +11,12 @@ const searchImgPath = '/images/search.svg';
 
 interface SearchProps {
   setKeyWords: (keys: string[]) => void;
+  searchUrl: string;
+  setSearchUrl: (url: string) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ setKeyWords }) => {
-  const [url, setSearchUrl] = useState('');
+const Search: React.FC<SearchProps> = ({ searchUrl, setSearchUrl, setKeyWords }) => {
+  const [url, setUrl] = useState(searchUrl)
 
   const doSearch = () => {
     const route = getUrl();
@@ -37,13 +39,14 @@ const Search: React.FC<SearchProps> = ({ setKeyWords }) => {
 
   const onQueryChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
     if (value) {
-      setSearchUrl(value);
+      setUrl(value)
     }
   };
 
   const onQuerySearch = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (url) {
+      setSearchUrl(url);
       doSearch();
     }
   };
