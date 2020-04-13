@@ -1,4 +1,4 @@
- import styled from 'styled-components';
+import styled from 'styled-components';
 
 interface AdProps {
   keyWords: string[];
@@ -17,7 +17,8 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   max-width: 100vh;
-  /* overflow-y: auto; */
+  overflow: auto;
+  max-height: calc(100vh - 20px);
 `;
 
 const ListItem = styled.li`
@@ -54,19 +55,19 @@ const AdList: React.FC<AdProps> = ({ keyWords }) => {
                 href={`https://www.flipkart.com/search?q=${word}`}
                 rel="noopener noreferrer"
                 target="_blank">
-                <img width="30px" src="/images/Flipkart.png" alt="flipkart"/>
+                <img width="30px" src="/images/Flipkart.png" alt="flipkart" />
               </Anchor>
               <Anchor
                 href={`https://www.amazon.in/s?k=${word}`}
                 rel="noopener noreferrer"
                 target="_blank">
-                <img width="30px" src="/images/Amazon.png" alt="amazon"/>
+                <img width="30px" src="/images/Amazon.png" alt="amazon" />
               </Anchor>
               <Anchor
                 href={`https://www.google.com/search?q=${word}`}
                 rel="noopener noreferrer"
                 target="_blank">
-                <img width="30px" src="/images/Google.png" alt="amazon"/>
+                <img width="30px" src="/images/Google.png" alt="amazon" />
               </Anchor>
             </span>
           </ListItem>

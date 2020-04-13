@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import Meta from './Meta';
 import GlobalStyles from './styles/GlobalStyles';
 import { LightTheme } from './styles/Theme';
+import Header from './Header';
 
 const Wrapper = styled.div`
   display: flex;
@@ -23,6 +24,7 @@ const Page: React.FC = ({ children }) => {
       <Meta />
       <GlobalStyles />
       <Wrapper>
+        <Header />
         <Container>{children}</Container>
       </Wrapper>
     </ThemeProvider>

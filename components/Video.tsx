@@ -16,8 +16,8 @@ const Video: React.FC<VideoProps> = ({ youtube_url }) => {
   return (
     <div>
       <iframe
-        width="640"
-        height="360"
+        width="768"
+        height="432"
         src={`https://www.youtube.com/embed/${getID(youtube_url)}`}
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
