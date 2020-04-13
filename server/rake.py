@@ -1,13 +1,4 @@
-"""
-Implementation of RAKE - Rapid Automtic Keyword Exraction algorithm
-as described in:
-Rose, S., D. Engel, N. Cramer, and W. Cowley (2010).
-Automatic keyword extraction from indi-vidual documents.
-In M. W. Berry and J. Kogan (Eds.), Text Mining: Applications and Theory.unknown: John Wiley and Sons, Ltd.
-"""
-
 import re
-import operator
 
 
 def is_number(s):
@@ -19,7 +10,7 @@ def is_number(s):
 
 
 def load_stop_words(stop_word_file, regex):
-    with open(stop_word_file, "r", encoding="utf-8") as stop_word_file:
+    with open(stop_word_file, "r") as stop_word_file:
         stop_words = re.split(regex, stop_word_file.read())
     return [
         word for word in stop_words if word not in ("", " ")
@@ -86,7 +77,7 @@ def calculate_word_scores(phraseList):
     for item in word_frequency:
         word_degree[item] = word_degree[item] + word_frequency[item]
 
-    # Calculate Word scores = deg(w)/frew(w)
+    # Calculate Word scores = degree(w)/frequency(w)
     word_score = {}
     for item in word_frequency:
         word_score.setdefault(item, 0)
@@ -126,7 +117,8 @@ class Rake:
             phrase_list, word_scores, minFrequency
         )
 
+        # Sort according to word score, higher comes first
         sorted_keywords = sorted(
-            keyword_candidates.items(), key=operator.itemgetter(1), reverse=True
+            keyword_candidates.items(), key=lambda x: x[1], reverse=True
         )
         return sorted_keywords

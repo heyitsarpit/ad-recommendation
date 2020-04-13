@@ -104,5 +104,6 @@ class Captions:
             raise Exception("Could not find captions.")
 
 
-# captions = Captions("https://www.youtube.com/watch?v=2xiCVNwhrDU")
-# print(captions.get_keywords())
+if __name__ == "__main__":
+    captions = Captions("https://www.youtube.com/watch?v=2xiCVNwhrDU")
+    print(captions.get_keywords())
