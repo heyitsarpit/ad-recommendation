@@ -26,6 +26,6 @@
     - Ricoh GR: https://www.youtube.com/watch?v=5msrk6yNRpk
     - Pizza: https://www.youtube.com/watch?v=jPQ87J_5qyw
 
-
 ## Screens
 
+![Image](/public/images/screenshot.png)
