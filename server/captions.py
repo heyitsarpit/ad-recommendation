@@ -83,20 +83,26 @@ def match_meta(phrase_list, meta):
     return list(set([*high_priority, *low_priority]))
 
 
-def caption_keywords(URL):
-    API_KEY = "AIzaSyAPUIRfD1l2VF-NpGndoVp7sH85I5PaoR4"
-    video_id = get_video_id(URL)
-    api_url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={API_KEY}&part=snippet"
-    try:
-        captions = get_captions(video_id)
-        phrase_list = get_key_phrases(captions, "./data/StopList.txt")
-        # brands_products = check_brand_or_product(word_list)
-        # meta = get_video_meta(api_url)
-        # match_meta(phrase_list, meta)
+# class captions():
+class Captions:
+    def __init__(self, URL):
+        self.URL = URL
 
-        return phrase_list
-    except:
-        raise Exception("Could not find captions.")
+    def get_keywords(self):
+        API_KEY = "AIzaSyAPUIRfD1l2VF-NpGndoVp7sH85I5PaoR4"
+        video_id = get_video_id(self.URL)
+        api_url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={API_KEY}&part=snippet"
+        try:
+            captions = get_captions(video_id)
+            phrase_list = get_key_phrases(captions, "./data/StopList.txt")
+            # brands_products = check_brand_or_product(word_list)
+            # meta = get_video_meta(api_url)
+            # match_meta(phrase_list, meta)
+
+            return phrase_list
+        except:
+            raise Exception("Could not find captions.")
 
 
-# print(caption_keywords("https://www.youtube.com/watch?v=2xiCVNwhrDU"))
+# captions = Captions("https://www.youtube.com/watch?v=2xiCVNwhrDU")
+# print(captions.get_keywords())

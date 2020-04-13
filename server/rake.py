@@ -27,11 +27,6 @@ def load_stop_words(stop_word_file, regex):
 
 
 def separate_words(text):
-    """
-    Utility function to return a list of all words that are have a length greater than a specified number of characters.
-    @param text The text that must be split in to words.
-    @param min_word_return_size The minimum no of characters a word must have to be included.
-    """
     splitter = re.compile("(?u)\W+")
     words = []
     for single_word in splitter.split(text):
@@ -43,10 +38,6 @@ def separate_words(text):
 
 
 def split_sentences(text):
-    """
-    Utility function to return a list of sentences.
-    @param text The text that must be split in to sentences.
-    """
     sentence_delimiters = re.compile(
         u"[.!?,-;:\t\\\\\"\\(\\)\\'\u2019\u2013]|\\s\\-\\s"
     )
@@ -116,15 +107,11 @@ def generate_candidate_keyword_scores(phrase_list, word_score, minFrequency):
     return keyword_candidates
 
 
-class Rake(object):
+class Rake:
     def __init__(self, stop_words, regex="[\W\n]+"):
-        # lets users call predefined stopwords easily in a platform agnostic manner or use their own list
-        if isinstance(stop_words, list):
-            self.__stop_words_pattern = build_stop_word_regex(stop_words)
-        else:
-            self.__stop_words_pattern = build_stop_word_regex(
-                load_stop_words(stop_words, regex)
-            )
+        self.__stop_words_pattern = build_stop_word_regex(
+            load_stop_words(stop_words, regex)
+        )
 
     def run(self, text, minCharacters=1, maxWords=5, minFrequency=1):
         sentence_list = split_sentences(text)

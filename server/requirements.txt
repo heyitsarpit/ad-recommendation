@@ -1,0 +1,6 @@
+Flask_Cors==3.0.8
+requests==2.18.4
+Flask==1.1.1
+textblob==0.15.3
+youtube_transcript_api==0.3.1
+pandas==1.0.3
