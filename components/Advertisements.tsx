@@ -1,17 +1,10 @@
 import styled from 'styled-components';
+import { MatchMethods } from './styles/types';
 
 interface AdProps {
   keyWords: string[];
+  matchMethods: string[];
 }
-
-const Recommendations = styled.div`
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 0 0.5em;
-  margin: 0 0.5em;
-  color: ${props => props.theme.textPrimary};
-`;
 
 const List = styled.ul`
   display: flex;
@@ -19,6 +12,15 @@ const List = styled.ul`
   max-width: 100vh;
   overflow: auto;
   max-height: calc(100vh - 20px);
+`;
+
+const MatchingMethod = styled.div`
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0 0.5em;
+  margin: 0 0.5em;
+  color: ${(props) => props.theme.textPrimary};
 `;
 
 const ListItem = styled.li`
@@ -32,7 +34,7 @@ const ListItem = styled.li`
     font-size: 1.1em;
     font-weight: bold;
     text-decoration: none;
-    color: ${props => props.theme.textPrimary};
+    color: ${(props) => props.theme.textPrimary};
   }
 `;
 
@@ -40,13 +42,13 @@ const Anchor = styled.a`
   padding: 0.2em 0.5em 0.2em 0;
   margin: 0.2em 0.2em 0.2em 0;
   font-size: 0.9em;
-  color: ${props => props.theme.textPrimaryDimmed};
+  color: ${(props) => props.theme.textPrimaryDimmed};
 `;
 
-const AdList: React.FC<AdProps> = ({ keyWords }) => {
+const AdList: React.FC<{ keyWords: string[] }> = ({ keyWords }) => {
   return (
     <>
-      {keyWords.map(word => {
+      {keyWords.map((word) => {
         return (
           <ListItem key={word}>
             <div className="search-for">Search for "{word}"</div>
@@ -77,11 +79,11 @@ const AdList: React.FC<AdProps> = ({ keyWords }) => {
   );
 };
 
-const Advertisement: React.FC<AdProps> = ({ keyWords }) => {
+const Advertisement: React.FC<AdProps> = ({ keyWords, matchMethods }) => {
   return (
     <div>
-      <Recommendations>Recommendations</Recommendations>
       <List>
+        <MatchingMethod>{matchMethods}</MatchingMethod>
         <AdList keyWords={keyWords} />
       </List>
     </div>

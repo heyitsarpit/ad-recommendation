@@ -1,10 +1,20 @@
 from urllib.parse import urlparse
 
 from rake import Rake
+from string_match import (
+    hamming,
+    levenshtein,
+    jaro_winkler,
+    jaccard,
+    sorensen_dice,
+    ratcliff_obershelp,
+)
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
 from textblob import TextBlob
 import requests
+import collections
+import operator
 
 
 def get_video_id(url):
@@ -45,18 +55,58 @@ def get_key_phrases(captions, stop_list):
     return phrase_list
 
 
-def check_brand_or_product(word_list):
-    found_brands = []
-    data = pd.read_csv("./data/flipkart.csv", usecols=["product_name"])
-    for word in word_list:
-        nums = [
-            num
-            for num in (data["product_name"].str.find(word.capitalize()))
-            if num > -1
-        ]
-        if len(nums) > 0:
-            found_brands.append(word)
-    return list(set(found_brands))
+def max_similarity_score(phrase, data):
+    pass
+
+
+def filter_product(keyprase_list, match_method):
+    found_products = []
+    data = pd.read_csv("./data/flipkart_processed.csv", usecols=["product_name"])
+    for phrase in keyprase_list:
+        if match_method == "Hamming":
+            scores = [
+                hamming(phrase, name)
+                for name in data["product_name"].astype(str).values
+            ]
+            max_score = max(scores)
+            found_products.append({"Key Phrase": phrase, "Score": max_score})
+        elif match_method == "Levenshtein":
+            scores = [
+                levenshtein(phrase, name)
+                for name in data["product_name"].astype(str).values
+            ]
+            max_score = max(scores)
+            found_products.append({"Key Phrase": phrase, "Score": max_score})
+        elif match_method == "Jaro-Winkler":
+            scores = [
+                jaro_winkler(phrase, name)
+                for name in data["product_name"].astype(str).values
+            ]
+            max_score = max(scores)
+            found_products.append({"Key Phrase": phrase, "Score": max_score})
+        elif match_method == "Jaccard":
+            scores = [
+                jaccard(phrase, name)
+                for name in data["product_name"].astype(str).values
+            ]
+            max_score = max(scores)
+            found_products.append({"Key Phrase": phrase, "Score": max_score})
+        elif match_method == "Sorensen Dice":
+            scores = [
+                sorensen_dice(phrase, name)
+                for name in data["product_name"].astype(str).values
+            ]
+            max_score = max(scores)
+            found_products.append({"Key Phrase": phrase, "Score": max_score})
+        elif match_method == "Ratcliff-Obershelp":
+            scores = [
+                ratcliff_obershelp(phrase, name)
+                for name in data["product_name"].astype(str).values
+            ]
+            max_score = max(scores)
+            found_products.append({"Key Phrase": phrase, "Score": max_score})
+
+    return sorted(found_products, key=operator.itemgetter("Score"), reverse=True)[:50]
 
 
 def get_video_meta(URL):
@@ -99,7 +149,20 @@ class Captions:
             # meta = get_video_meta(api_url)
             # match_meta(phrase_list, meta)
 
-            return phrase_list
+            return {
+                "Hamming": filter_product(phrase_list, match_method="Hamming"),
+                "Levenshtein": filter_product(phrase_list, match_method="Levenshtein"),
+                "Jaro-Winkler": filter_product(
+                    phrase_list, match_method="Jaro-Winkler"
+                ),
+                "Jaccard": filter_product(phrase_list, match_method="Jaccard"),
+                "Sorensen Dice": filter_product(
+                    phrase_list, match_method="Sorensen Dice"
+                ),
+                "Ratcliff-Obershelp": filter_product(
+                    phrase_list, match_method="Ratcliff-Obershelp"
+                ),
+            }
         except:
             raise Exception("Could not find captions.")
 
