@@ -59,48 +59,13 @@ def max_similarity_score(phrase, data):
     pass
 
 
-def filter_product(keyprase_list, match_method):
+def filter_product(caption_keyprase_list, description_keyprase_list, match_method):
     found_products = []
     data = pd.read_csv("./data/flipkart_processed.csv", usecols=["product_name"])
-    for phrase in keyprase_list:
+    for phrase in caption_keyprase_list:
         if match_method == "Hamming":
             scores = [
                 hamming(phrase, name)
-                for name in data["product_name"].astype(str).values
-            ]
-            max_score = max(scores)
-            found_products.append({"Key Phrase": phrase, "Score": max_score})
-        elif match_method == "Levenshtein":
-            scores = [
-                levenshtein(phrase, name)
-                for name in data["product_name"].astype(str).values
-            ]
-            max_score = max(scores)
-            found_products.append({"Key Phrase": phrase, "Score": max_score})
-        elif match_method == "Jaro-Winkler":
-            scores = [
-                jaro_winkler(phrase, name)
-                for name in data["product_name"].astype(str).values
-            ]
-            max_score = max(scores)
-            found_products.append({"Key Phrase": phrase, "Score": max_score})
-        elif match_method == "Jaccard":
-            scores = [
-                jaccard(phrase, name)
-                for name in data["product_name"].astype(str).values
-            ]
-            max_score = max(scores)
-            found_products.append({"Key Phrase": phrase, "Score": max_score})
-        elif match_method == "Sorensen Dice":
-            scores = [
-                sorensen_dice(phrase, name)
-                for name in data["product_name"].astype(str).values
-            ]
-            max_score = max(scores)
-            found_products.append({"Key Phrase": phrase, "Score": max_score})
-        elif match_method == "Ratcliff-Obershelp":
-            scores = [
-                ratcliff_obershelp(phrase, name)
                 for name in data["product_name"].astype(str).values
             ]
             max_score = max(scores)
@@ -168,5 +133,5 @@ class Captions:
 
 
 if __name__ == "__main__":
-    captions = Captions("https://www.youtube.com/watch?v=2xiCVNwhrDU")
+    captions = Captions("https://www.youtube.com/watch?v=qyuyKwMujCY")
     print(captions.get_keywords())

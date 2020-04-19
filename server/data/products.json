@@ -1,0 +1,37 @@
+[
+    {
+        "product_name": "New Apple MacBook Pro (13-inch, 8GB RAM, 128GB Storage, 1.4GHz Intel Core i5) - Silver",
+        "product_description": "Quad-core 8th-generation Intel Core i5 processor; Brilliant Retina display with True Tone technology. Touch Bar and Touch ID; Intel Iris Plus Graphics 645. Ultrafast SSD; Two Thunderbolt 3 (USB-C) ports. Up to 10 hours of battery life. 802.11ac Wi-Fi. Latest Apple-designed keyboard. Force Touch trackpad",
+        "link": "https://www.amazon.in/Apple-MacBook-13-inch-Storage-1-4GHz/dp/B07V3LTVHK/",
+        "domain": "laptop",
+        "brand": "apple"
+    },
+    {
+        "product_name": "New Apple MacBook Pro (13-inch, 8GB RAM, 256GB Storage, 2.4GHz Intel Core i5) - Silver ",
+        "product_description": "8th-generation quad-core Intel Core i5 processor. Brilliant Retina display with True Tone technology. Touch Bar and Touch ID. Intel Iris Plus Graphics 655;Ultrafast SSD;Four Thunderbolt 3 (USB-C) ports;Up to 10 hours of battery life;802.11ac Wi-Fi;Latest Apple-designed keyboard;Force Touch trackpad. Mac OS operating system. 2.300kg laptop. 8th-generation quad-core Intel Core i5 processo. . Brilliant Retina display with True Tone technology. Touch Bar and Touch ID. Intel Iris Plus Graphics 655. Ultrafast SSD. Four Thunderbolt 3 (USB-C) ports. Up to 10 hours of battery life. 802.11ac Wi-Fi. Latest Apple-designed keyboard. Force Touch trackpad",
+        "link": "https://www.amazon.in/Apple-MacBook-Pro-8th-Generation-Intel-Core-i5/dp/B07S9G74SL/",
+        "domain": "laptop",
+        "brand": "apple"
+    },
+    {
+        "product_name": "DELL XPS 9570 15.6-inch FHD Laptop (8th Gen-Core i7-8750H/8GB/256 GB SSD/Windows 10/MS Office/Nvidia GeForce GTX 1050Ti 4GB Graphics), Silver ",
+        "product_description": "2.20 Ghz Intel i7-8750H processor. 8gb DDR4 RAM. Hard drive. 15.6-inch screen, nvidia geforce GTX 1050 Ti 4gb graphics. Windows 10 operating system. 1.75kg laptop. Dazzling detail: With the UltraSharp 4K HDR display (3840 x 2160), you can see each detail of every pixel without needing to zoom in. And with 6 million more pixels than Full HD and 3 million more than the MacBook Pro, you can edit images with pinpoint accuracy without worrying about blurriness or jagged lines. Super-speed processors: The most powerful XPS laptop we’ve ever built includes the latest 6 core 8th Gen Intel Core processors and NVIDIA GeForce GTX 1050Ti graphics card (4GB GDDR5 video memory), so you can blaze through your most intensive tasks. Ultimate Mobile Performance: The first Intel Core i9 mobile processor with up to 6 cores and 12 threads, delivers more single and multi-threaded performance than 7th Gen with the ability to overclock. Intel’s most-powerful mobile platform for creators enables faster 4K video editing with Adobe Premier Pro.  Maximum memory and storage: Supports up to 32GB of memory with a bandwidth of 2666MHz, 1.2 times the speed of 2133MHz options. Faster memory means you get to the content that you need quicker. Expandable storage up to 1TB of solid state drive (SSDs), available in faster PCIe versions, provide plenty of storage room and high-performance responsiveness to access and run your applications quickly.The XPS 15 boots and resumes in seconds with a solid state drive, so you can do more without waiting. ",
+        "link": "https://www.amazon.in/9570-15-6-inch-Gen-Core-i7-8750H-Graphics/dp/B07GR86R4D",
+        "domain": "laptop",
+        "brand": "dell"
+    },
+    {
+        "product_name": "Microsoft SurfacePro Intel Core i5 7th Gen 12.3-inch Touchscreen 2-in-1 Thin and Light Laptop (8GB/256GB/Windows 10 Pro/Silver/0.771Kg), 1796 ",
+        "product_description": "Processor: 7th Generation Intel Core i5 processor,2.6GHz base speed processor. Operating System: Pre-loaded Windows 10 Pro with lifetime validity. Display: 12.3-inch PixelSense (2736 x 1824) display, Touchscreen enabled. Memory & Storage: 8GB DDR3 RAM with Intel HD 620 graphics, Storage: 256GB Flash Memory SSD. Design & battery: Touchscreen tablet, Thin and light design, Tablet weight 0.770kg, Maximum battery life = 13.5 hours, Lithium ion battery. Warranty: This genuine Microsoft laptop comes with 1 year onsite domestic warranty from Microsoft covering manufacturing defects and not covering physical damage. For more details, see Warranty section below. Pre-installed Software: Windows 10 Professional, In the Box: Surface Pro tablet,Power Supply, Quick Start Guide, Safety and warranty documentsr, NOTE: Surface Pro Signature Type cover and Microsoft Surface Pen sold separately",
+        "link": "https://www.amazon.in/Microsoft-SurfacePro-12-3-inch-Touchscreen-1796/dp/B073GNFPRB",
+        "domain": "laptop",
+        "brand": "microsoft"
+    },
+    {
+        "product_name": "HP 14s cr1018TX 14-inch Laptop (8th Gen i5-8265U /8GB/1TB HDD + 256GB SSD/Windows 10 Home/MS Office/2 GB Graphics), Natural Silver ",
+        "product_description": "1.6GHz Intel i5-8265U  8th Gen processor. 8GB DDR4 RAM. 1TB 5400rpm hard drive + 256GB SSD. 14-inch screen, AMD Radeon 530 2GB Graphics. Windows 10 Home operating system. 1.43kg laptop. This slim, ultra-portable laptop delivers reliable performance. Long-lasting battery life makes it easy to stay social, productive, and connected to what matters. The micro-edge display gives you lots to look at with more screen in a smaller frame. ",
+        "link": "https://www.amazon.in/HP-i5-8265U-Office-Graphics-cr1018tx/dp/B07WDJ33TL",
+        "domain": "laptop",
+        "brand": "hp"
+    }
+]
