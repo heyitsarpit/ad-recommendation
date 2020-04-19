@@ -15,6 +15,7 @@ from textblob import TextBlob
 import requests
 import collections
 import operator
+import json
 
 
 def get_video_id(url):
@@ -47,31 +48,69 @@ def get_captions(video_id):
     return captions
 
 
-def get_key_phrases(captions, stop_list):
+def get_key_phrases(document, stop_list):
     r = Rake(stop_list)
-    keywords = r.run(captions)
+    keywords = r.run(document.lower())
 
     phrase_list = [word[0] for word in keywords if len(word[0].split(" ")) < 4]
     return phrase_list
 
 
-def max_similarity_score(phrase, data):
-    pass
+# def get_description_keywords():
+#     with open('./data/products.json') as products:
+#         data = json.load(products)
 
 
-def filter_product(caption_keyprase_list, description_keyprase_list, match_method):
+def similarity_score(s1, s2, match_method):
+    if match_method == "Hamming":
+        return hamming(s1, s2)
+    elif match_method == "Levenshtein":
+        return levenshtein(s1, s2)
+    elif match_method == "Jaro-Winkler":
+        return jaro_winkler(s1, s2)
+    elif match_method == "Jaccard":
+        return jaccard(s1, s2)
+    elif match_method == "Sorensen Dice":
+        return sorensen_dice(s1, s2)
+    elif match_method == "Ratcliff-Obershelp":
+        return ratcliff_obershelp(s1, s2)
+    else:
+        raise Exception("Could not find similarity score")
+
+
+def get_product_keywords(product_location, stopwords):
+    stored_products = []
+    name_keywords = []
+    desc_keywords = []
+    with open(product_location, "r") as products:
+        data = json.load(products)
+        for product in data:
+            name_keywords.append(get_key_phrases(product["product_name"], stopwords))
+            desc_keywords.append(
+                get_key_phrases(product["product_description"], stopwords)
+            )
+            product.pop("product_description", None)
+            stored_products.append(product)
+    return zip(stored_products, name_keywords, desc_keywords)
+
+
+def filter_product(
+    caption_keyprase, product_with_keywords, match_method, alpha=0.5, beta=0.5
+):
     found_products = []
-    data = pd.read_csv("./data/flipkart_processed.csv", usecols=["product_name"])
-    for phrase in caption_keyprase_list:
-        if match_method == "Hamming":
-            scores = [
-                hamming(phrase, name)
-                for name in data["product_name"].astype(str).values
-            ]
-            max_score = max(scores)
-            found_products.append({"Key Phrase": phrase, "Score": max_score})
+    scores = []
+    caption_string = " ".join(caption_keyprase)
 
-    return sorted(found_products, key=operator.itemgetter("Score"), reverse=True)[:50]
+    for (product, name_keywords, desc_keywords) in product_with_keywords:
+        name = " ".join(name_keywords).lower()
+        desc = " ".join(desc_keywords).lower()
+        name_score = alpha * similarity_score(caption_string, name, match_method)
+        desc_score = beta * similarity_score(caption_string, desc, match_method)
+
+        found_products.append(
+            {"product": product, "score": name_score + desc_score,}
+        )
+    return sorted(found_products, key=operator.itemgetter("score"), reverse=True)[:5]
 
 
 def get_video_meta(URL):
@@ -100,8 +139,9 @@ def match_meta(phrase_list, meta):
 
 # class captions():
 class Captions:
-    def __init__(self, URL):
+    def __init__(self, URL, match_method):
         self.URL = URL
+        self.match_method = match_method
 
     def get_keywords(self):
         API_KEY = "AIzaSyAPUIRfD1l2VF-NpGndoVp7sH85I5PaoR4"
@@ -110,28 +150,15 @@ class Captions:
         try:
             captions = get_captions(video_id)
             phrase_list = get_key_phrases(captions, "./data/StopList.txt")
-            # brands_products = check_brand_or_product(word_list)
-            # meta = get_video_meta(api_url)
-            # match_meta(phrase_list, meta)
+            product_with_keywords = get_product_keywords(
+                "./data/products.json", "./data/StopList.txt"
+            )
 
-            return {
-                "Hamming": filter_product(phrase_list, match_method="Hamming"),
-                "Levenshtein": filter_product(phrase_list, match_method="Levenshtein"),
-                "Jaro-Winkler": filter_product(
-                    phrase_list, match_method="Jaro-Winkler"
-                ),
-                "Jaccard": filter_product(phrase_list, match_method="Jaccard"),
-                "Sorensen Dice": filter_product(
-                    phrase_list, match_method="Sorensen Dice"
-                ),
-                "Ratcliff-Obershelp": filter_product(
-                    phrase_list, match_method="Ratcliff-Obershelp"
-                ),
-            }
+            return filter_product(phrase_list, product_with_keywords, self.match_method)
         except:
             raise Exception("Could not find captions.")
 
 
 if __name__ == "__main__":
-    captions = Captions("https://www.youtube.com/watch?v=qyuyKwMujCY")
+    captions = Captions("https://www.youtube.com/watch?v=2xiCVNwhrDU", "Sorensen Dice")
     print(captions.get_keywords())
