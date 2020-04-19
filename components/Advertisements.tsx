@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { MatchMethods } from './styles/types';
+import { MatchMethods, ProductsMethod } from './types';
 
 interface AdProps {
-  keyWords: string[];
-  matchMethods: string[];
+  productsWithMethod: ProductsMethod;
 }
 
 const List = styled.ul`
@@ -16,10 +15,13 @@ const List = styled.ul`
 
 const MatchingMethod = styled.div`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.3em;
   font-weight: bold;
-  padding: 0 0.5em;
-  margin: 0 0.5em;
+  color: ${(props) => props.theme.textPrimary};
+`;
+
+const Score = styled.div`
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
   color: ${(props) => props.theme.textPrimary};
 `;
 
@@ -28,7 +30,12 @@ const ListItem = styled.li`
   flex-direction: column;
   padding: 0.2em 0.5em 0.2em 0;
   margin: 0.2em 0.2em 0.2em 0;
-
+  border-bottom: solid 1px ${(props) => props.theme.colorUnfocused};
+  :hover {
+    outline: none;
+    opacity: 1;
+    border-color: ${(props) => props.theme.textPrimary};
+  }
   .search-for {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.1em;
@@ -42,51 +49,53 @@ const Anchor = styled.a`
   padding: 0.2em 0.5em 0.2em 0;
   margin: 0.2em 0.2em 0.2em 0;
   font-size: 0.9em;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
   color: ${(props) => props.theme.textPrimaryDimmed};
 `;
 
-const AdList: React.FC<{ keyWords: string[] }> = ({ keyWords }) => {
+const AnchorBrand = styled(Anchor)`
+  font-size: 1em;
+
+  color: ${(props) => props.theme.textSpecial};
+`;
+
+const Advertisement: React.FC<AdProps> = ({ productsWithMethod }) => {
   return (
     <>
-      {keyWords.map((word) => {
+      {Object.entries(productsWithMethod).map((MethodProduct, index) => {
+        const [matchMethod, products] = MethodProduct;
+        console.log(MethodProduct);
         return (
-          <ListItem key={word}>
-            <div className="search-for">Search for "{word}"</div>
-            <span>
-              <Anchor
-                href={`https://www.flipkart.com/search?q=${word}`}
-                rel="noopener noreferrer"
-                target="_blank">
-                <img width="30px" src="/images/Flipkart.png" alt="flipkart" />
-              </Anchor>
-              <Anchor
-                href={`https://www.amazon.in/s?k=${word}`}
-                rel="noopener noreferrer"
-                target="_blank">
-                <img width="30px" src="/images/Amazon.png" alt="amazon" />
-              </Anchor>
-              <Anchor
-                href={`https://www.google.com/search?q=${word}`}
-                rel="noopener noreferrer"
-                target="_blank">
-                <img width="30px" src="/images/Google.png" alt="amazon" />
-              </Anchor>
-            </span>
+          <ListItem>
+            <List>
+              <MatchingMethod>{matchMethod}</MatchingMethod>
+              {products.map((product) => {
+                return (
+                  <ListItem key={product.product_name}>
+                    <Score>Score: {String(product.score).slice(0, 5)}</Score>
+                    <div>
+                      <AnchorBrand
+                        href={`https://www.amazon.in/s?k=${product.brand} ${product.domain}`}
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        {product.brand} {product.domain}
+                      </AnchorBrand>
+                    </div>
+                    <div>
+                      <Anchor href={product.link} rel="noopener noreferrer" target="_blank">
+                        {product.product_name}
+                        {/* <img width="30px" src="/images/Amazon.png" alt="amazon" /> */}
+                      </Anchor>
+                    </div>
+                  </ListItem>
+                );
+              })}
+            </List>
           </ListItem>
         );
       })}
     </>
-  );
-};
-
-const Advertisement: React.FC<AdProps> = ({ keyWords, matchMethods }) => {
-  return (
-    <div>
-      <List>
-        <MatchingMethod>{matchMethods}</MatchingMethod>
-        <AdList keyWords={keyWords} />
-      </List>
-    </div>
   );
 };
 

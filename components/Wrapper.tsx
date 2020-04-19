@@ -1,11 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Search from './Search';
 import Advertisement from './Advertisements';
 import styled from 'styled-components';
 import Video from './Video';
-import { MatchMethods } from './styles/types';
-import StringMatchSelector from './StringMatchSelector';
+import { MatchMethods, ProductsMethod } from './types';
 
 const AdBody = styled.div`
   display: flex;
@@ -42,27 +41,36 @@ const Error = styled.div`
 `;
 
 const Wrapper: React.FC = () => {
-  const [keyWords, setKeyWords] = useState(['one, two, ex']);
-  const [matchMethods, setMatchMethods] = useState(['Jaccard Index']);
+  const [products, setProducts] = useState([]);
+  const [matchMethod, setMatchMethod] = useState('Jaccard' as MatchMethods);
   const [searchUrl, setSearchUrl] = useState('https://www.youtube.com/watch?v=2xiCVNwhrDU');
   const [error, setError] = useState('');
+  const [productsWithMethod, setProductsWithMethod] = useState({} as ProductsMethod);
+
+  useEffect(() => {
+    const newProds = { ...productsWithMethod};
+    newProds[matchMethod] = products
+
+    setProductsWithMethod(newProds);
+  }, [products]);
 
   return (
     <div>
       <Search
-        setKeyWords={setKeyWords}
+        setProducts={setProducts}
         searchUrl={searchUrl}
         setSearchUrl={setSearchUrl}
         setError={setError}
+        matchMethod={matchMethod}
+        setMatchMethod={setMatchMethod}
       />
-      {/* <StringMatchSelector setMatchMethods={setMatchMethods}/> */}
 
-      {keyWords?.length ? (
+      {products?.length ? (
         <AdBody>
           <Video youtube_url={searchUrl} />
           <Recommendations>Recommendations</Recommendations>
           <AdRow>
-            <Advertisement keyWords={keyWords} matchMethods={matchMethods} />
+            <Advertisement productsWithMethod={productsWithMethod} />
           </AdRow>
         </AdBody>
       ) : (

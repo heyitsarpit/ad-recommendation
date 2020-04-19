@@ -6,17 +6,28 @@ import SearchButton from './styles/SearchButton';
 import SearchInput from './styles/SearchInput';
 import { getUrl } from '../lib/getURL';
 import NProgress from 'nprogress';
+import StringMatchSelector from './StringMatchSelector';
+import { MatchMethods } from './types';
 
 const searchImgPath = '/images/search.svg';
 
 interface SearchProps {
   searchUrl: string;
-  setKeyWords: (keys: string[]) => void;
+  matchMethod: string;
+  setProducts: (keys: string[]) => void;
   setSearchUrl: (url: string) => void;
   setError: (error: string) => void;
+  setMatchMethod: (method: MatchMethods) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ searchUrl, setSearchUrl, setKeyWords, setError }) => {
+const Search: React.FC<SearchProps> = ({
+  searchUrl,
+  setSearchUrl,
+  setProducts,
+  setError,
+  matchMethod,
+  setMatchMethod
+}) => {
   const [url, setUrl] = useState(searchUrl);
 
   const doSearch = () => {
@@ -25,14 +36,15 @@ const Search: React.FC<SearchProps> = ({ searchUrl, setSearchUrl, setKeyWords, s
 
     axios
       .post(route, {
-        youtube_url: url
+        youtube_url: url,
+        match_method: matchMethod
       })
-      .then(res => {
-        setKeyWords(res.data);
+      .then((res) => {
+        setProducts(res.data);
 
         NProgress.done();
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
         setError('An Error Occurred.');
         NProgress.done();
@@ -56,6 +68,7 @@ const Search: React.FC<SearchProps> = ({ searchUrl, setSearchUrl, setKeyWords, s
         type="text"
         placeholder="Enter YouTube URL"
       />
+      <StringMatchSelector setMatchMethod={setMatchMethod}/>
       <SearchButton type="submit">
         <img src={searchImgPath} />
       </SearchButton>

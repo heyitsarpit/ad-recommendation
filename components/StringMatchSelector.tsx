@@ -1,13 +1,22 @@
-import Select from 'react-select';
-import { MatchMethods } from './styles/types';
+import { MatchMethods } from './types';
+import styled from 'styled-components';
 
 type StringMatch<T = MatchMethods> = Array<{ value: T; label: T }>;
 
 interface MatchSelectorProps {
-  setMatchMethods: (values: string[]) => void;
+  setMatchMethod: (values: MatchMethods) => void;
 }
 
-const StringMatchSelector: React.FC<MatchSelectorProps> = ({ setMatchMethods }) => {
+const Selector = styled.select`
+  outline: none;
+  background-color: white;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+`;
+const OptionTag = styled.option``;
+
+const StringMatchSelector: React.FC<MatchSelectorProps> = ({ setMatchMethod }) => {
   const Options: StringMatch = [
     { value: 'Jaccard', label: 'Jaccard' },
     { value: 'Hamming', label: 'Hamming' },
@@ -17,21 +26,20 @@ const StringMatchSelector: React.FC<MatchSelectorProps> = ({ setMatchMethods }) 
     { value: 'Ratcliff-Obershelp', label: 'Ratcliff-Obershelp' }
   ];
 
-  const onSelectChange = (event: React.ChangeEvent) => {
-    console.log(event.target);
-    // setMatchMethods();
+  const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setMatchMethod(event.target.value as MatchMethods);
   };
 
   return (
-    <Select
-      defaultValue={[Options[0]]}
-      isMulti
-      name="Match_Method"
-      options={Options}
-      className="Match_Method_Select"
-      classNamePrefix="select"
-      onChange={onSelectChange}
-    />
+    <Selector onChange={onSelectChange}>
+      {Options.map((option) => {
+        return (
+          <OptionTag key={option.value} value={option.value}>
+            {option.label}
+          </OptionTag>
+        );
+      })}
+    </Selector>
   );
 };
 

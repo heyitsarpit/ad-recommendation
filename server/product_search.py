@@ -106,10 +106,8 @@ def filter_product(
         desc = " ".join(desc_keywords).lower()
         name_score = alpha * similarity_score(caption_string, name, match_method)
         desc_score = beta * similarity_score(caption_string, desc, match_method)
-
-        found_products.append(
-            {"product": product, "score": name_score + desc_score,}
-        )
+        product["score"] = name_score + desc_score
+        found_products.append(product)
     return sorted(found_products, key=operator.itemgetter("score"), reverse=True)[:5]
 
 
@@ -138,12 +136,12 @@ def match_meta(phrase_list, meta):
 
 
 # class captions():
-class Captions:
+class ProductSearch:
     def __init__(self, URL, match_method):
         self.URL = URL
         self.match_method = match_method
 
-    def get_keywords(self):
+    def get_products(self):
         API_KEY = "AIzaSyAPUIRfD1l2VF-NpGndoVp7sH85I5PaoR4"
         video_id = get_video_id(self.URL)
         api_url = f"https://www.googleapis.com/youtube/v3/videos?id={video_id}&key={API_KEY}&part=snippet"
@@ -160,5 +158,7 @@ class Captions:
 
 
 if __name__ == "__main__":
-    captions = Captions("https://www.youtube.com/watch?v=2xiCVNwhrDU", "Sorensen Dice")
-    print(captions.get_keywords())
+    captions = ProductSearch(
+        "https://www.youtube.com/watch?v=2xiCVNwhrDU", "Sorensen Dice"
+    )
+    print(captions.get_products())
