@@ -52,6 +52,7 @@ const Search: React.FC<SearchProps> = ({
   };
 
   const onQueryChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => setUrl(value);
+
   const onQuerySearch = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (url) {

@@ -31,19 +31,9 @@ export const LightTheme: Theme = {
   ...theme,
   bgColor: 'rgb(255, 255, 255)',
   textPrimary: 'rgb(45,45, 45)',
-  textPrimaryDimmed: 'rgba(2, 2, 2, 0.5)',
+  textPrimaryDimmed: 'rgb(70, 70, 70)',
   borderColor: 'white',
   textSecondary: 'rgb(50,50,50)',
-  textSpecial: 'rgb(255, 64, 46)',
+  textSpecial: 'rgb(255, 22, 0)',
   colorUnfocused: 'rgb(150,150,150)'
 };
-
-// export const DarkTheme: Theme = {
-//   ...theme,
-//   bgColor: 'rgb(20, 20, 20)',
-//   textPrimary: 'rgb(243, 224, 195)',
-//   textPrimaryDimmed: 'rgba(255, 235, 205, 0.8)',
-//   borderColor: 'rgb(23.4%, 23.4%, 23.4%)',
-//   textSecondary: 'rgb(150,150,150)',
-//   colorUnfocused: 'rgb(100,100,100)'
-// };

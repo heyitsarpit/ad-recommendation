@@ -1,13 +1,7 @@
 [
+
     {
-        "product_name": "New Apple MacBook Pro (13-inch, 8GB RAM, 128GB Storage, 1.4GHz Intel Core i5) - Silver",
-        "product_description": "Quad-core 8th-generation Intel Core i5 processor; Brilliant Retina display with True Tone technology. Touch Bar and Touch ID; Intel Iris Plus Graphics 645. Ultrafast SSD; Two Thunderbolt 3 (USB-C) ports. Up to 10 hours of battery life. 802.11ac Wi-Fi. Latest Apple-designed keyboard. Force Touch trackpad",
-        "link": "https://www.amazon.in/Apple-MacBook-13-inch-Storage-1-4GHz/dp/B07V3LTVHK/",
-        "domain": "laptop",
-        "brand": "apple"
-    },
-    {
-        "product_name": "New Apple MacBook Pro (13-inch, 8GB RAM, 256GB Storage, 2.4GHz Intel Core i5) - Silver ",
+        "product_name": "Apple MacBook Pro Laptop (13-inch, 8GB RAM, 256GB Storage, 2.4GHz Intel Core i5) - Silver ",
         "product_description": "8th-generation quad-core Intel Core i5 processor. Brilliant Retina display with True Tone technology. Touch Bar and Touch ID. Intel Iris Plus Graphics 655;Ultrafast SSD;Four Thunderbolt 3 (USB-C) ports;Up to 10 hours of battery life;802.11ac Wi-Fi;Latest Apple-designed keyboard;Force Touch trackpad. Mac OS operating system. 2.300kg laptop. 8th-generation quad-core Intel Core i5 processo. . Brilliant Retina display with True Tone technology. Touch Bar and Touch ID. Intel Iris Plus Graphics 655. Ultrafast SSD. Four Thunderbolt 3 (USB-C) ports. Up to 10 hours of battery life. 802.11ac Wi-Fi. Latest Apple-designed keyboard. Force Touch trackpad",
         "link": "https://www.amazon.in/Apple-MacBook-Pro-8th-Generation-Intel-Core-i5/dp/B07S9G74SL/",
         "domain": "laptop",
@@ -40,13 +34,6 @@
         "link": "https://www.amazon.in/Bose-Quiet-Comfort-Wireless-Headphone/dp/B0756CYWWD",
         "domain": "headphone",
         "brand": "bose"
-    },
-    {
-        "product_name": "Infinity (JBL) Glide 500 Wireless Headphones with 20 Hours Playtime (Quick Charge), Deep Bass and Dual Equalizer (Charcoal Black) ",
-        "product_description": "Dual Equaliser Modes for Normal & Deep Bass Output. Wireless Bluetooth Streaming. 20 hours Music Playtime Under Optimum Audio Settings. Frequency Range: 20Hz~20kHz ; Driver Size: 32mm ; Driver Sensitivity (1KHz / 1mW): 102±3dB ; Impedence (ohms): 32ohms ; Battery Capacity: 200mAh ; Charging Time: 2hrs ; Speed charging time: 10min ; Charging Type: 5V 1A wire charging. Lightweight and Flat Foldable Design. Handsfree Calling. Earcups lined with Soft Cushion Cups",
-        "link": "https://www.amazon.in/Infinity-Glide-500-Wireless-Headphones/dp/B07W5MYRF4",
-        "domain": "headphone",
-        "brand": "jbl"
     },
     {
         "product_name": "Infinity (JBL) Glide 500 Wireless Headphones with 20 Hours Playtime (Quick Charge), Deep Bass and Dual Equalizer (Charcoal Black) ",
@@ -140,10 +127,199 @@
         "brand": "nokia"
     },
     {
-        "product_name": "Samsung Galaxy M10 (Ocean Blue , 3GB RAM, 32GB Storage)",
-        "product_description": "13MP+5MP ultra-wide angle dual camera | 5MP f2.0 front camera. The internet usage time is 15 hours for 3G as well as 19 hours for LTE.The video playback time is 17 hours and audio playback time is 84 hours 15.8cm (6.22) HD+ Infinity V Display with 90% screen ratio 3GB RAM and 32GB internal memory expandable up to 512GB in a dedicated slot Fast face unlock | 3400 mAh lithium-ion battery Dual SIM (nano+nano) with dual standby and dual VoLTE 1.6GHz Exynos 7870 octa-core processor | Android Oreo v8.1 OS ",
-        "link": "https://www.amazon.in/Samsung-Galaxy-Ocean-Blue-32GB/dp/B07HGH8JWQ",
+        "product_name": "Samsung Galaxy S20 + (Cosmic Black, 8GB RAM, 128GB Storage) Mobile Phone",
+        "product_description": "Galaxy S20 series introduce the next generation of mobile innovation. Completely redesigned to remove interruptions from your view. No notch, no distractions. Precise laser cutting, on-screen security, and a Dynamic AMOLED that's easy on the eyes make the Infinity-O Display the most innovative Galaxy screen yet. Use the Ultra Wide Camera to take stunning, cinematic photos with a 123 degree field of vision. Quad rear camera - 64MP OIS F2.0 tele camera + 12MP F2.2 ultra wide + 12MP (2PD) OIS F1.8 wide + VGA depth camera | 10MP (2PD) OIS F2.2 front punch hole camera | rear LED flash. 16.95 centimeters (6.7-inch) dynamic AMOLED display with capacitive touchscreen, 3200 x 1440 pixels resolution | Quad HD+ resolution. Memory, Storage & SIM: 8GB RAM | 128GB internal memory expandable up to 1TB | Dual SIM (nano+nano) dual-standby (4G+4G), microSD card slot (expandable upto 1 TB), hybrid sim slot. Android v10.0 operating system with 2.73GHz+2.5GHz+2GHz Exynos 990 octa core processor. 4500mAH (non-removable) lithium-ion battery | Face-unlock & finger print sensor. 1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase. Box also includes: Non-removable battery included, earphones, travel adapter, USB cable and user manual",
+        "link": "https://www.amazon.in/Samsung-Galaxy-Storage-Additional-Exchange/dp/B084451YSS",
         "domain": "mobile phone",
-        "brand": "Samsung"
+        "brand": "samsung"
+    },
+    {
+        "product_name": "Lifebuoy Total 10 Antibacterial Hand Sanitizer 50 ml",
+        "product_description": "Boosts Immunity for 10 hours Kills 99.99% germs without water Kills 99.99% germs anytime, anywhere Kills germs instantly",
+        "link": "https://www.amazon.in/Lifebuoy-Total-10-Hand-Sanitizer/dp/B01GJEIDWC",
+        "domain": "groceries",
+        "brand": "Lifebuoy"
+    },
+    {
+        "product_name": "Pure & Sure Organic Wheat Flour, 5kg",
+        "product_description": "100 % Certified Organic Wheat Flour, made from the finest quality wheat sourced from certified organic farms across India. Whole wheat flour and no MaidaGrown without use of any chemicals, pesticides or insecticides Cultivated with controlled organic farming practices",
+        "link": "https://www.amazon.in/Pure-Sure-Organic-Wheat-Flour/dp/B00M7102GC",
+        "domain": "groceries",
+        "brand": "Pure & Sure"
+    },
+    {
+        "product_name": "Pro Nature 100% Organic Sugar, White, 500g ",
+        "product_description": "100 Percent certified organic Suplhur less Un-refined Free from any chemicals",
+        "link": "https://www.amazon.in/Pro-Nature-Organic-Sugar-White/dp/B079H1138Z",
+        "domain": "groceries",
+        "brand": "Pro Nature"
+    },
+    {
+        "product_name": "Fortune Soyabean Oil, 1L Pouch",
+        "product_description": "This is a Vegetarian product. Light, odourless and healthy oil",
+        "link": "https://www.amazon.in/Fortune-Soyabean-Oil-1L-Pouch/dp/B00TX50T4K",
+        "domain": "groceries",
+        "brand": "fortune"
+    },
+    {
+        "product_name": "Tata Salt, 1kg",
+        "product_description": "Vacuum evaporated iodised salt Lodine helps in mental development of children and prevents iodine deficiency disorders in adults Tata salt has ventured into new product segments to meet the changing needs of its customers, adding tata salt lite, tata salt plus, sprinklers, tata black salt and tata rock salt to its repertoire",
+        "link": "https://www.amazon.in/Tata-Salt-1kg/dp/B07575FPC3",
+        "domain": "groceries",
+        "brand": "Tata"
+    },
+    {
+        "product_name": "Travel360 degree Neck Travel Pillow Multipurpose",
+        "product_description": "The neck pillow wraps gently around the neck for relaxing the head and neck muscles and provides super soft and best support simultaneously to the head, neck, and chin while sleeping upright without getting a stiff neck. The pillow is very soft, so you can also twist it in several positions and control how tight it will be around your neck with the ropes.GREAT for TRAVELING USE in CAR, TRUCK, BUS, TRAIN, or AIRPLANE. Use it while watching TV on the bed or couch, reading book in a camper or on the beach and so onThe pillow is very soft, so you can also twist it in several positions and control how tight it will be around your neck with the ropes.There might be minor color variation between actual product and image shown on screen due to lighting on the photography",
+        "link": "https://www.amazon.in/travel360-degree-Travel-Pillow-Multipurpose/dp/B07MT97SPX",
+        "domain": "travel",
+        "brand": "Travel360"
+    },
+    {
+        "product_name": "GoTrippin Universal Travel Adapter with Dual USB Charger Ports (Black), International Worldwide Charger Plug for Phone, Laptop, Camera, Tablet",
+        "product_description": "You do not need to carry separate chargers or have multiple adapters everywhere you go, GoTrippin universal travel adpater is the perfect solution for you. It allows SIMULTANEOUS use of the AC Power Socket and Two USB CHARGING Ports. Recharge for almost all USB Devices like cell phones, ipad, Bluetooth speakers, camera, tablets, razor and More. The travel adapter does not work with high power appliances such as flat iron, hair curler, hair dryer, steam iron, hot water heater, coffee maker",
+        "link": "https://www.amazon.in/GoTrippin-Universal-Adapter-International-Worldwide/dp/B07WGM9MHW",
+        "domain": "travel",
+        "brand": "GoTrippin"
+    },
+    {
+        "product_name": "Mufubu Presents Get Unbarred 55 LTR Rucksack for Trekking, Hiking with Shoe Compartment (Black/Blue)",
+        "product_description": "Mufubu is all about our Vision, we design and produce quality lifestyle bags that becomes your life companion in every walk of your life. These lifestyle Bags not only offers style but also unique functions and features that will certainly set you apart from the crowd. This Hiking bag is comfortable and easy to carry, ultra-light and durable with large capacity to meet the different requirements of both men and women.",
+        "link": "https://www.amazon.in/Presents-Unbarred-Rucksack-Trekking-Compartment/dp/B07L4JHCW3",
+        "domain": "travel",
+        "brand": "Mufubu"
+    },
+    {
+        "product_name": "POLESTAR XPLORE 55 ltrs with Rain Cover Rucksack/Hiking/Trekking Backpack Bag 55 ltrs (Sky)",
+        "product_description": "These rucksacks are lightweight, have a soft and ventilated back panel, and are perfect for carrying all your necessities. Adjustable and breathable padded shoulder strap to meet different requirements for both men and women; made from highly rip and water resistant polyester fabric, provide strengthen and long-lasting performance ; roomy enough for your traveling requirements also having a Rain cover.",
+        "link": "https://www.amazon.in/POLESTAR-XPLORE-Rucksack-Trekking-Backpack/dp/B07RC94TG8",
+        "domain": "travel",
+        "brand": "POLESTAR"
+    },
+    {
+        "product_name": "Roundhill Furniture Stout Panel King Size Bedroom Set with Bed, Dresser, Mirror, 2 Night Stands, Chest, Grey",
+        "product_description": " Custom-curate the bedroom set of your dreams by choosing your pieces. Wood block legs. This set includes King bed, dresser, mirror, 2 nightstands, chestSimple wood plank panel bed and coordinating storage pieces. Solid hardwood and veneers Construction.Drawers on metal guides. Industrial metal pulls. Dark Gray, brushed Finish.",
+        "link": "https://www.amazon.in/Roundhill-Furniture-Bedroom-Dresser-Mirror/dp/B0815Y6BRF",
+        "domain": "furniture",
+        "brand": "Roundhill"
+    },
+    {
+        "product_name": "Zemic 6 Layer Multipurpose Portable Folding Shoes Rack/Shoes Shelf/Shoes Cabinet with Wardrobe Cover, Easy Installation Stand for Shoes(Shoes Rack)(Shoes Rack, Shoes Racks for Home)_6 Layer Grey.",
+        "product_description": "SELECTED STRONG MATERIAL: Constructed from selected Non-woven Fabric, high quality steel tube and PP Plastic connectors, this shoe tower will offer you long term organization systemABUNDANT STORAGE SPACE: Durable 6 tiers Shoe Rack can Store up to 24 pairs of shoes to keep your bedroom, hallway or mudroom well organized; Side pockets design for storing shoe brush, keys or other sundriesSASIMO SPACE SAVING SHOE ORGANIZER: Great this amazing shoe rack will suitable for your cubby walk-in closet, entryway or garage, with 6 3/4 Layer Height for regular heels, sneakers or flatsDUSTPROOF & EASY TO ASSEMBLE: Shoe rack with zippered cover keeps your shoes away from dust and un-viewable, with units snap together for easy assembly and no tool required ",
+        "link": "https://www.amazon.in/Zemic-Multipurpose-Portable-Wardrobe-Installation/dp/B0836XMDQL",
+        "domain": "furniture",
+        "brand": "Zemic"
+    },
+    {
+        "product_name": "Furny Apollo 5 Seater L Shape LHS Sofa Set Fabric (Grey)",
+        "product_description": "A very generously made sofa from all the best materials yields a perfect modular sofa for your living room. Furny sofa collection is spaciously designed with larger depth to allow for broader seating and allowing complete relaxation until the thigh to provide with superb comfort. A generously proportioned sofa that fits around you - with individual modular units to make delivery hassle free and protecting your sofa against any untoward damages occurring due to narrow corridors. Sofa made of high density foam, deep fiber cushioning and made of finest material that last long. The 12 month warranty on sofas is on the frame and mechanisms if any.",
+        "link": "https://www.amazon.in/Furny-Supersoft-Ortho-Pillow-Blue/dp/B07HRGQBY5",
+        "domain": "furniture",
+        "brand": "Furny"
+    },
+    {
+        "product_name": "Deluxe Swing Chair Outdoor Furniture PE Rattan Wicker Hanging Hammock with Stand, Cushioned Loveseat Chaise Lounger, Perfect for Patio, Garden, Porch, Backyard, House, Indoor Decor (CHARCOAL)",
+        "product_description": "Wicker Swing Chair. Chair Body: Fully Handwoven and Handcrafted by Outstanding Craftsman. Stand: Powder Coated Bronze Steel Frame. Material: Resin Wicker",
+        "link": "https://www.amazon.in/Furny-Supersoft-Ortho-Pillow-Blue/dp/B07HRGQBY5",
+        "domain": "furniture",
+        "brand": "rattan wicker"
+    },
+    {
+        "product_name": "ASICS Men's Cricket Shoes",
+        "product_description": " Closure: Lace-Up. Shoe Width: Regular. Outer Material: Synthetic Leather. Closure Type: Lace-Up, Removable Sockliner. Toe Style: Round Toe",
+        "link": "https://www.amazon.in/ASICS-Expanse-Cricket-Shoes-9-P613Y/dp/B07TVJR353",
+        "domain": "shoes",
+        "brand": "ASICS"
+    },
+    {
+        "product_name": "Adidas Men's Adiray 1.0 M Running Shoes",
+        "product_description": " Sole: EVA. Closure: Lace-Up. Shoe Width: Medium. This product runs a size small. If you usually buy UK 9, buy UK 10 for this. Material Type: Mesh. Lifestyle: Sports",
+        "link": "https://www.amazon.in/Adidas-Adiray-Running-Shoes-8-CI1750/dp/B077KPFWFT",
+        "domain": "shoes",
+        "brand": "Adidas"
+    },
+    {
+        "product_name": "Nike Men's Court Lite 2 Tennis Shoes",
+        "product_description": "Sole: Synthetic. Combination leather, Synthetic and mesh construction for comfortable support. Full-length foam midsole with shank for cushioning and stabilization. Outsole traction pattern for control on hard courts",
+        "link": "https://www.amazon.in/Nike-Court-Tennis-Shoes-8-AR8836-001/dp/B07HG8MWN4",
+        "domain": "shoes",
+        "brand": "Nike"
+    },
+    {
+        "product_name": "Woodland Mens Hiking Trekking Travel Shoes (Boots)",
+        "product_description": "Sleek and stylish leather boots which match the royal urban lifestyle and let you demonstrate its durability when you tread on rocky terrains. Leather and textile uppers add sophistication while rugged outer sole gives practicality.",
+        "link": "https://www.amazon.in/Woodland-Dnavy-Boots-10-GB-1207112CMA/dp/B07DPYHPJV",
+        "domain": "shoes",
+        "brand": "Woodland"
+    },
+    {
+        "product_name": "Lee Cooper Men's Leather Formal Shoes",
+        "product_description": " Closure: Lace-Up. Shoe Width: Medium. Material Type: Leather. Lifestyle: Business. Closure Type: Lace-Up",
+        "link": "https://www.amazon.in/Lee-Cooper-Lc2344b-Leather-FGLC_8907788754182/dp/B07PFBVCH9",
+        "domain": "shoes",
+        "brand": "lee cooper"
+    },
+    {
+        "product_name": "Canon EOS 1500D 24.1 Digital SLR Camera (Black) with EF S18-55 is II Lens, 16GB Card and Carry Case",
+        "product_description": "All camera users, even beginners, will be able to capture amazing images and movies with this DSLR camera, which is equipped with a 24.1-megapixel APS-C-size CMOS sensor and an optical viewfinder for an authentic DSLR shooting experience. Capturing sharp images is easy thanks to the fast, accurate AF and the large grip that provides a firm, steady hold on the camera. Built-in Wi-Fi / NFC connectivity enables the seamless upload of photos and videos to social media.",
+        "link": "https://www.amazon.in/Canon-1500D-Digital-Camera-S18-55/dp/B07BS4TJ43",
+        "domain": "camera",
+        "brand": "Canon"
+    },
+    {
+        "product_name": "Fujifilm X-T100 24.2MP Mirrorless Camera (Silver) with XC15-45mm Lens Kit",
+        "product_description": "Sporting a sleek and stylish design, the mirrorless x-t100 offers a host of features including a high magnification electronic viewfinder, a horizontal tilting rear LCD screen, the latest built-in Bluetooth technology for easy and seamless image transfer and an extended battery life, with up to 430 frames possible per charge. In addition, the x-t100 weighs just 448G with anodized coating on aluminum top cover, delivering a simultaneously retro and Luxury feel. The x-t100 boasts a powerful 24.2 Megapixel APS-C size sensor and is equipped with a Phase detection autofocus system featuring a newly developed autofocus algorithm for super-fast and precise focusing. Combined with Fujifilms renowned outstanding image quality with the companys proprietary color reproduction technology, the x-t100 is stylish, portable, and highly versatile - making it the ideal companion for everyday photography.",
+        "link": "https://www.amazon.in/X-T100-XC15-45mm-Lens-Kit-Silver/dp/B07D7HFB45",
+        "domain": "camera",
+        "brand": "Fujifilm"
+    },
+    {
+        "product_name": "Nikon D3400 Digital Camera Kit (Black) with Lens AF-P DX Nikkor 18-55mm, 70-300mm f/4.5-6.3G ED VR Lens, 16 GB Class 10 SD Card and DSLR Bag",
+        "product_description": "Nikon India is pleased to announce the price and sales start of most looked forward new model D-SLR D3400, it is the first entry-level D-SLR enabled with SnapBridge connectivity via a built-in Bluetooth low energy technology that automatically transfers all photos taken with the camera to a smart device with simple, one-time set-up. This eliminates the need to manually reconnect the camera to a smart device for each image transfer and connection is maintained even when the camera is turned off. Now sharing of images taken from the D-SLR onto social media has never been easier. For the always-connected user the D3400 is an excellent introduction to D-SLR photography. It combines best of both worlds and will allow users to innovate with excellent image quality and also enjoy connectivity on the go with their smart devices to upload and share images. With SnapBridge connectivity via a built-in Bluetooth low energy technology, D3400 will allow users to transfer all pictures clicked with the camera to a smart device automatically. Users will no more need to manually pair the devices each time to select and transfer images, thus making on-the-go share possible even with a D-SLR. On the picture quality front, D3400 integrates a DX-format CMOS sensor which will lead to sharper images in spite of low light conditions.",
+        "link": "https://www.amazon.in/Nikon-Digital-18-55mm-70-300mm-4-5-6-3G/dp/B01KITZRBE",
+        "domain": "camera",
+        "brand": "Nikon"
+    },
+    {
+        "product_name": "Sony Alpha ILCE-6000Y 24.3MP Digital SLR Camera (Black) + 16-50mm Lens + 55-210mm Lens with MDR-XB550AP Headphones and Power Bank (CP-VB10)",
+        "product_description": "SonyAlpha 6000 mirrorless camera takes imaging far beyond the capability of a DSLR. As powerful as a pro camera, but smaller and easy to use, they turn your everyday shots into beautiful movies and photography to both see and feel. A Sony mirrorless camera, with far larger image sensor and bright lenses, makes better use of the light you have. The smart image processor ensures sharp, low-noise images even without a flash. Sony mirrorless cameras are compact and easy to use, so they'll quickly become your daily go-to camera. The rechargeable battery, tilting screens and customization make them an easy upgrade for any image enthusiast",
+        "link": "https://www.amazon.in/Sony-A6000Y-Digital-16-50mm-55-210mm/dp/B00XOXFB1I",
+        "domain": "camera",
+        "brand": "Sony"
+    },
+    {
+        "product_name": "Garnier Skin Naturals Instantly Perfect Skin Perfector BB Cream, 30g",
+        "product_description": "Skin concerns, such as discoloration, dullness, blotchiness and dryness can come from a number of different sources. It's hard to find just one product that addresses them all. Garnier Miracle skin perfector B.B. cream immediately and effectively fullfills your skincare expectations with just one multi-benefit product that combines intense moisturizing skincare and immediate skin perfecting coverage for skin that looks naturally more even, radiant and smooth. It’s a new idea in skincare. B.B. Cream (Beauty Balm Cream) is a hybrid formula that offers advanced skincare and immediate skin perfecting coverage in one single beauty product.",
+        "link": "https://www.amazon.in/Garnier-Naturals-Instantly-Perfect-Perfector/dp/B01IOPZ6PG",
+        "domain": "Beauty Product",
+        "brand": "Garnier"
+    },
+    {
+        "product_name": "Nivea Total Face Cleanup",
+        "product_description": "Nivea total face clean up combines the effects of wash, pack and scrub to give you 5 benefits in 5 minutes. It is enriched with active magnolia extracts for pure and clear skin. It can be used as a face wash, a scrub and a pack. . Active magnolia extracts provides 5 benefits in one pack for pure and clean skin. Product can be used as a face wash, scrub or a pack. Peeling particles unclogs pores and purify skin from blackheads. Is soft and gentle on skin",
+        "link": "https://www.amazon.in/Nivea-Total-Face-Cleanup-100ml/dp/B01N9R4L9R",
+        "domain": "Beauty Product",
+        "brand": "Nivea"
+    },
+    {
+        "product_name": "Lakmé Radiance Complexion Compact, Pearl",
+        "product_description": "Contains vitamin E and C , allantoin complex. Advanced micromesh technology. Use this dynamic compact by Lakme and get a glowing complexion in an instant. Lakme Radiance Compact is a multi-vitamin enriched foundation make-up that comes in compact powder form to offer a radiant look to your skin. Lakme Radiance Compact comes in a stylish compact case with a mirror attached to the lid. A application puff is also provided along with the package. The puff and the powder are separated by a thin plastic film. Lakme Radiance Compact gives a neat matte finish to the skin. It lightens all possible marks on my face, gives a great coverage for at least 4 hours. ",
+        "link": "https://www.amazon.in/Lakme-Radiance-Complexion-Compact-Pearl/dp/B01CGEL4UM",
+        "domain": "Beauty Product",
+        "brand": "Lakmé"
+    },
+    {
+        "product_name": "Lakmé Eyeconic Block Tip Liner Pen, Black",
+        "product_description": "Lakmé introduces the newest trend that allows you to style your eyes in more than one way. Introducing which comes with two interesting nibs: fine tip and block tip. Get precision lined eyes and an intense black finish with the new lakmé eye conic liner pen – fine tip, which is perfect for an everyday look. On days when you want to look dramatic, get an intense, bold black finish with the lakmé eye conic liner pen - block tip. Lakmé eye conic liner pen allows you to draw long lasting, waterproof strokes across your eyelid that stay for 14 hours. Priced at rs.475 Each, these pens allow you convenient application while you get ready for work or party. How to apply: fine tip - draw a straight, fine line from the inner corner to the outer edge of the upper eyelid. Extend the line from the outer corner and flick to create a wing. Draw a fine line on the lower eyelid from the inner corner to the wing to complete the look. Block tip - draw a straight block line from the inner corner to the middle of your upper eyelid. From the midway mark, continue the block line to the outer edge of the upper eyelid. From the outer corner of the eyelid draw an extended straight graphic block to complete the look. ",
+        "link": "https://www.amazon.in/Lakme-Eyeconic-Liner-Pen-BLock/dp/B077BBF31H",
+        "domain": "Beauty Product",
+        "brand": "Lakmé"
+    },
+    {
+        "product_name": "Lakmé Perfecting Liquid Foundation, Marble",
+        "product_description": "Sport a dazzling glow, wherever you go, say the Lakme Perfecting Liquid Foundation. An integral part of your face makeup, this liquid based foundation spreads evenly to cover spots, blemishes, dark circles and patchy skin tone. It is formulated to be water-resistant, smudge free and long lasting. The Vitamin E and silicones enrich the skin- rejuvenating, replenishing and nourishing it on application. This foundation is available in a small bottle that’s easy to carry. Get that instant perfection right away.",
+        "link": "https://www.amazon.in/Lakme-Perfecting-Liquid-Foundation-Marble/dp/B01CGEQP1K",
+        "domain": "Beauty Product",
+        "brand": "Lakmé"
     }
 ]

@@ -11,9 +11,7 @@ from string_match import (
 )
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
-from textblob import TextBlob
 import requests
-import collections
 import operator
 import json
 
@@ -38,7 +36,6 @@ def get_video_id(url):
         elif o.path[:3] == "/v/":
             return o.path.split("/")[2]
     return None
-
 
 def get_captions(video_id):
     res = YouTubeTranscriptApi.get_transcript(video_id)
@@ -95,7 +92,7 @@ def get_product_keywords(product_location, stopwords):
 
 
 def filter_product(
-    caption_keyprase, product_with_keywords, match_method, alpha=0.5, beta=0.5
+    caption_keyprase, product_with_keywords, match_method, alpha=1, beta=0.4
 ):
     found_products = []
     scores = []
@@ -135,7 +132,6 @@ def match_meta(phrase_list, meta):
     return list(set([*high_priority, *low_priority]))
 
 
-# class captions():
 class ProductSearch:
     def __init__(self, URL, match_method):
         self.URL = URL
@@ -157,8 +153,9 @@ class ProductSearch:
             raise Exception("Could not find captions.")
 
 
+
 if __name__ == "__main__":
     captions = ProductSearch(
-        "https://www.youtube.com/watch?v=2xiCVNwhrDU", "Sorensen Dice"
+        "https://www.youtube.com/watch?v=2xiCVNwhrDU", "Jaccard"
     )
     print(captions.get_products())

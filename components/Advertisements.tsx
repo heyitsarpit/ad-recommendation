@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MatchMethods, ProductsMethod } from './types';
+import capitalize from '../lib/capitalize';
 
 interface AdProps {
   productsWithMethod: ProductsMethod;
@@ -16,6 +17,7 @@ const List = styled.ul`
 const MatchingMethod = styled.div`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
+  font-size: 1.25em;
   color: ${(props) => props.theme.textPrimary};
 `;
 
@@ -55,7 +57,7 @@ const Anchor = styled.a`
 `;
 
 const AnchorBrand = styled(Anchor)`
-  font-size: 1em;
+  font-size: 1.2em;
 
   color: ${(props) => props.theme.textSpecial};
 `;
@@ -65,7 +67,6 @@ const Advertisement: React.FC<AdProps> = ({ productsWithMethod }) => {
     <>
       {Object.entries(productsWithMethod).map((MethodProduct, index) => {
         const [matchMethod, products] = MethodProduct;
-        console.log(MethodProduct);
         return (
           <ListItem>
             <List>
@@ -73,13 +74,13 @@ const Advertisement: React.FC<AdProps> = ({ productsWithMethod }) => {
               {products.map((product) => {
                 return (
                   <ListItem key={product.product_name}>
-                    <Score>Score: {String(product.score).slice(0, 5)}</Score>
+                    {/* <Score>Score: {String(product.score).slice(0, 5)}</Score> */}
                     <div>
                       <AnchorBrand
                         href={`https://www.amazon.in/s?k=${product.brand} ${product.domain}`}
                         rel="noopener noreferrer"
                         target="_blank">
-                        {product.brand} {product.domain}
+                        {capitalize(product.brand + " " +  product.domain)}
                       </AnchorBrand>
                     </div>
                     <div>

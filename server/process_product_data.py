@@ -10,3 +10,9 @@ def process_product_data():
 
 if __name__ == "__main__":
     process_product_data()
+
+# if __name__ == "__main__":
+#     captions = ProductSearch(
+#         "https://www.youtube.com/watch?v=2xiCVNwhrDU", "Sorensen Dice"
+#     )
+#     print(captions.get_products())

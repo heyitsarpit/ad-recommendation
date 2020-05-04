@@ -48,11 +48,15 @@ const Wrapper: React.FC = () => {
   const [productsWithMethod, setProductsWithMethod] = useState({} as ProductsMethod);
 
   useEffect(() => {
-    const newProds = { ...productsWithMethod};
-    newProds[matchMethod] = products
+    const newProds = { ...productsWithMethod };
+    newProds[matchMethod] = products;
 
     setProductsWithMethod(newProds);
   }, [products]);
+
+  useEffect(() => {
+    setProductsWithMethod([] as any);
+  }, [searchUrl]);
 
   return (
     <div>
