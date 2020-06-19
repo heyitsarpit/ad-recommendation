@@ -12,7 +12,7 @@ const AdBody = styled.div`
   padding: 1em;
   margin: 1em;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const Recommendations = styled.div`
@@ -26,7 +26,7 @@ const Recommendations = styled.div`
 
 const AdRow = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 1fr;
   grid-gap: 10px;
   overflow-x: auto;
   max-width: 90vw;

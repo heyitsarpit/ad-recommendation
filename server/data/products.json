@@ -1,5 +1,4 @@
 [
-
     {
         "product_name": "Apple MacBook Pro Laptop (13-inch, 8GB RAM, 256GB Storage, 2.4GHz Intel Core i5) - Silver ",
         "product_description": "8th-generation quad-core Intel Core i5 processor. Brilliant Retina display with True Tone technology. Touch Bar and Touch ID. Intel Iris Plus Graphics 655;Ultrafast SSD;Four Thunderbolt 3 (USB-C) ports;Up to 10 hours of battery life;802.11ac Wi-Fi;Latest Apple-designed keyboard;Force Touch trackpad. Mac OS operating system. 2.300kg laptop. 8th-generation quad-core Intel Core i5 processo. . Brilliant Retina display with True Tone technology. Touch Bar and Touch ID. Intel Iris Plus Graphics 655. Ultrafast SSD. Four Thunderbolt 3 (USB-C) ports. Up to 10 hours of battery life. 802.11ac Wi-Fi. Latest Apple-designed keyboard. Force Touch trackpad",
@@ -321,5 +320,145 @@
         "link": "https://www.amazon.in/Lakme-Perfecting-Liquid-Foundation-Marble/dp/B01CGEQP1K",
         "domain": "Beauty Product",
         "brand": "Lakmé"
+    },
+    {
+        "product_name": " PS4 1TB Slim console (Free Games : Detroit /The Last of Us/God of War/Fortnight Voucher /PSN 3 Month Inside the Box",
+        "product_description": "Play the greatest games and PS4 exclusive, take your adventures online with PS plus and Stream or download TV shows and movies from Netflix, PS store or wherever you get your favourite entertainment. Live the game in extraordinary new ways with PS4 and PS VR. Simply connect the PS VR headset to your PS4 and immerse yourself in breath-taking virtual reality games, experiences and entertainment. Hdr-enabled PS4 games burst into life with incredible colour and clarity on an HDR TV, delivering a more vibrant, realistic spectrum of colours. Store your games, apps, screenshots and videos with 1TB model – slimmer and lighter than the original PS4 model and available in jet Black",
+        "link": "https://www.amazon.in/PS4-Slim-console-Free-Games/dp/B07ZFKSP88",
+        "domain": "Gaming",
+        "brand": "Sony"
+    },
+    {
+        "product_name": "PS4 God of War (PS4)",
+        "product_description": "In the new PS4 game, his vengeance against the gods of Olympus behind him, Kratos now lives in the realm of Norse deities and monsters. It’s in this harsh, unforgiving world that he must fight to survive, and not only teach his son to do the same… but also prevent him from repeating the ghost of sparta’s bloodstained mistakes. God of war combines all the hallmarks of the iconic series – brutal combat, epic boss fights and breath-taking scale – and fuses them with a powerful and moving narrative",
+        "link": "https://www.amazon.in/PS4-God-of-War/dp/B07YQ73Y8T",
+        "domain": "Gaming",
+        "brand": "Sony"
+    },
+    {
+        "product_name": "Marvel's Spider Man (PS4) - Game of the Year Edition (PS4)",
+        "product_description": "Spider-man is an open-world action-adventure game set in the borough of Manhattan in a fictionalized version of modern-day new York city. It is presented from a third-person perspective showing the playable character and allowing the camera to be rotated freely around them. . The city that never sleeps DLC with additional mission and challenges. This is an all-new spider-man universe, featuring familiar characters in unfamiliar roles, take control of a complex dual life, as a young adult with great powers… and evolving relationships. Swing freely through Marvel’s new York City in epic action set-pieces filled with a rich narrative and relatable characters",
+        "link": "https://www.amazon.in/Marvels-Spider-Man-PS4-Game/dp/B07X23YRCS/",
+        "domain": "Gaming",
+        "brand": "Sony"
+    },
+    {
+        "product_name": "Xbox One S 1TB All-Digital Edition Console (Free Digital Games: Minecraft, Sea of Thieves, Forza Horizon 3) (Disc Free gaming)",
+        "product_description": "The best value in games and entertainment: Xbox One S has over 1, 300 games: blockbusters, popular franchises and Xbox One exclusive. Play with friends, access entertainment apps. An instant digital game library: includes three of the most compelling video game franchises with included downloads of Minecraft, Forza Horizon 3 and sea of thieves. Equipped with 4K resolution for ultra HD video streaming, high dynamic range to enjoy brilliant graphic details with high dynamic range & wide colour gamut. Does not play physical discs. Games are downloaded and ready to play when you are, no need to worry about discs ",
+        "link": "https://www.amazon.in/One-All-Digital-Console-Digital-Games/dp/B07SQCGD5C",
+        "domain": "Gaming",
+        "brand": "Microsoft"
+    },
+    {
+        "product_name": "Xbox One S Devil May Cry 5 Special Edition Bundle (1TB)",
+        "product_description": "Gradient purple Xbox One S 1TB console, wireless controller, full-game download of Devil May Cry 5 Deluxe Edition, 1-month trial of Xbox game Pass & 1-month trial of Xbox Live Gold. Experience stylish action like never before on Xbox One S get ready to annihilate an army of demons with swords, guns, chainsaw-motorcycles, more with the Xbox One S Devil May Cry 5 Special Ed. Bundle. Devil May Cry 5 from the creators of the best-selling action franchise comes the latest chapter in the Devil May Cry saga",
+        "link": "https://www.amazon.in/Xbox-One-Devil-Special-Bundle/dp/B07SX2YDDK",
+        "domain": "Gaming",
+        "brand": "Microsoft"
+    },
+    {
+        "product_name": "Object-Oriented Programming with C++",
+        "product_description": "The book aims at providing an all-round enrichment of knowledge in the area of object-oriented programming with C++ as the implementation of language. The author has used simple language to explain critical concepts of object-oriented programming and for better understanding of the readers. The same concepts have been implemented in solved examples using C++ programming language. Retaining is original style of lucid writing, the books has ample solved examples, programming exercises and new practice questions. This revised edition has new projects and incorporates a couple of new elements like Learning Objectives and Limitations. The topic on Polymorphism has been revised and expanded for better understanding.",
+        "link": "https://www.amazon.in/Object-Oriented-Programming-C-Balagurusamy/dp/9352607996",
+        "domain": "Programming",
+        "brand": "Book"
+    },
+    {
+        "product_name": "Core Python Programming",
+        "product_description": "At present, Java occupies number 1 rank as the most used programming language since almost all the projects are developed in Java. Python is already occupying 2nd to 4th position and will be the most demanded language after Java in near future. Python is used with other programming languages on Internet as well as for developing standalone applications. Python programmers are paid high salaries in the software development industry. Hence, it is time for beginners as well as existing programmers to focus their attention on Python.",
+        "link": "https://www.amazon.in/Core-Python-Programming-Nageswara-Rao/dp/938605230X",
+        "domain": "Programming",
+        "brand": "Book"
+    },
+    {
+        "product_name": "Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming",
+        "product_description": "Completely revised and updated, this best-selling introduction to programming in JavaScript focuses on writing real applications. JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+        "link": "https://www.amazon.in/dp/1593279507",
+        "domain": "Programming",
+        "brand": "Book"
+    },
+    {
+        "product_name": "Complete Python Bootcamp: Go from zero to hero in Python 3",
+        "product_description": "Become a Python Programmer and learn one of employer's most requested skills of 2018! This is the most comprehensive, yet straight-forward, course for the Python programming language on Udemy! Whether you have never programmed before, already know basic syntax, or want to learn about the advanced features of Python, this course is for you! In this course we will teach you Python 3. (Note, we also provide older Python 2 notes in case you need them)",
+        "link": "https://www.udemy.com/course/complete-python-bootcamp/",
+        "domain": "Programming",
+        "brand": "Course"
+    },
+    {
+        "product_name": "React - The Complete Guide (incl Hooks, React Router, Redux)",
+        "product_description": "JavaScript is the major driver of modern web applications since it's the only programming language which runs in the browser and hence allows you to provide highly reactive apps. You'll be able to achieve mobile-app like user experiences in the web. But using JavaScript can be challenging - it quickly becomes overwhelming to create a nice web app with vanilla JavaScript and jQuery only. The course will start at the very basics and explain what exactly React is and how you may use it (and for which kind of apps). Thereafter, we'll go all the way from basic to advanced. We'll not just scratch the surface but dive deeply into React as well as popular libraries like react-router and Redux. By the end of the course, you can build amazing React (single page) applications!",
+        "link": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+        "domain": "Programming",
+        "brand": "Course"
+    },
+    {
+        "product_name": "Adobe Photoshop",
+        "product_description": "Adobe Photoshop is an image editing software developed and manufactured by Adobe Systems Inc. Photoshop is considered one of the leaders in photo editing software. The software allows users to manipulate, crop, resize, and correct color on digital photos. The software is particularly popular amongst professional photographers and graphic designers.",
+        "link": "https://www.adobe.com/in/products/photoshop.html",
+        "domain": "Creative Software",
+        "brand": "Adobe"
+    },
+    {
+        "product_name": "Adobe Lightroom",
+        "product_description": "Adobe Lightroom (officially Adobe Photoshop Lightroom) is a family of image organization and image manipulation software developed by Adobe Systems for Windows, macOS, iOS, Android, and tvOS (Apple TV). It allows importing/saving, viewing, organizing, tagging, editing, and sharing large numbers of digital images.[5] Unlike Photoshop, Lightroom's edits are always non-destructive by keeping the original image and the edits applied to it saved separately. Despite sharing its name with Adobe Photoshop, it cannot perform many Photoshop functions such as doctoring (adding, removing or altering the appearance of individual image items), rendering text or 3D objects on images, or modifying individual video frames. Lightroom is not a file manager like Adobe Bridge. It cannot operate on files unless they are imported into its database first, and only in recognized image formats.",
+        "link": "https://www.adobe.com/in/products/photoshop-lightroom.html?promoid=RL89NGLD&mv=other",
+        "domain": "Creative Software",
+        "brand": "Adobe"
+    },
+    {
+        "product_name": "Afinity Designer",
+        "product_description": "Affinity Designer is a vector graphic design solution used by professional designers, artists, and creatives who are working on illustrations, icons, branding, UI designs, typography, print projects, mock ups, web graphics, pattern designs, and concept arts. The software allows them to craft precise curves, use dazzling colors, and customize live shapes for their vector illustrations. In addition, Affinity Designer enables them to create artistic texts for headlines and frames of advertisement body copy.",
+        "link": "https://affinity.serif.com/en-gb/designer/",
+        "domain": "Creative Software",
+        "brand": "Afinity"
+    },
+    {
+        "product_name": "Snapseed",
+        "product_description": "Snapseed is a photo-editing application produced by Nik Software, now owned by Google, for iOS and Android that enables users to enhance photos and apply digital filters. Snapseed users can edit pictures using swiping gestures to select different effects and enhancements. Alternatively, users can opt for an automatic adjustment of color and contrast. Snapseed can save users' editing history and redirect to any of the actions before. It can also create and save filter combinations by using the default filters and editing features. The list of special effects and filters includes Drama, Grunge, Vintage, Center-focus, Frames, and a Tilt-shift (which resizes photos). Users can import RAW images as well for better quality edits.[6][7] Snapseed 2.0 introduced new filters such as lens blur, glamour glow, HDR scape and noir, while also reformatting the tools section with a clearer user interface.[5] Users can directly share the images on social networking sites like Facebook and Instagram.",
+        "link": "https://play.google.com/store/apps/details?id=com.niksoftware.snapseed&hl=en_IN",
+        "domain": "Creative Software",
+        "brand": "Google"
+    },
+    {
+        "product_name": "Canva",
+        "product_description": "Canva is a graphic design platform that allows users to create social media graphics, presentations, posters and other visual content. It is available on web and mobile, and integrates millions of images, fonts, templates and illustrations. Users can choose from many professional designed templates, and edit the designs and upload their own photos through a drag and drop interface. The platform is free to use, and paid subscriptions like Canva Pro and Canva for Enterprise offer additional functionality. Users can also pay for physical products to be printed and shipped.",
+        "link": "https://www.canva.com/",
+        "domain": "Creative Softwareanva",
+        "brand": "Canva"
+    },
+    {
+        "product_name": "Befach 4x Diabetic White Rice (4.5 Kgs)",
+        "product_description": "Its 50 % less carbohydrates then regular white rice. Taste same as regular white rice. White, fine, silky and smooth rice. For daily use. While we work to ensure that product information is correct, on occasion manufacturers may alter their ingredient lists. Actual product packaging and materials may contain more and/or different information than that shown on our web site. We recommend that you do not solely rely on the information presented and that you always read labels, warnings, and directions before using or consuming a product. ",
+        "link": "https://www.amazon.in/Befach-4x-Diabetic-White-Rice/dp/B07HM5421C",
+        "domain": "Food",
+        "brand": "Befach"
+    },
+    {
+        "product_name": "Del Monte Tomato Ketchup - Original Blend",
+        "product_description": "Del Monte Tomato Ketchup uses Quality Vine Ripened Tomatoes. Each batch of Del Monte Tomato sauce is carefully processed with premium ingredients and under goes stringent quality checks to ensure product superiority. Like diversity of Indian cuisines, Del Monte Tomato Ketchup can be used diversely- as a condiment, ingredient or a dip in any of the cuisines",
+        "link": "https://www.amazon.in/Delmonte-Tomato-Ketchup-Original-Blend/dp/B07F26ZS1K",
+        "domain": "Condiments",
+        "brand": "Del Monte"
+    },
+    {
+        "product_name": "Everest Chat Masala",
+        "product_description": "Everest chaat masala is a blended spice mix that combines various Indian spices like black pepper, cumin, hing, dried mango powder or amchur, black salt, coriander, dry ginger, mint leaf, nutmeg, pomegranate seeds and much more!",
+        "link": "https://www.amazon.in/Everest-Chat-Masala-100g/dp/B00MOFMQT2",
+        "domain": "Condiments",
+        "brand": "Everest"
+    },
+    {
+        "product_name": "",
+        "product_description": "",
+        "link": "",
+        "domain": "",
+        "brand": ""
+    },
+    {
+        "product_name": "",
+        "product_description": "",
+        "link": "",
+        "domain": "",
+        "brand": ""
     }
 ]

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const HeaderStyles = styled.div`
   color: ${props => props.theme.textPrimary};
-  margin: 0 auto;
+  /* margin: 0 auto; */
   font-size: 1.8em;
   font-weight: bold;
   padding: 0.1em;

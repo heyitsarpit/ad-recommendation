@@ -6,7 +6,7 @@ const SearchBox = styled.form`
   padding: 0.5em;
   border-bottom: solid 1px ${(props) => props.theme.colorUnfocused};
   opacity: 0.8;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 70%;
   :hover {
     outline: none;

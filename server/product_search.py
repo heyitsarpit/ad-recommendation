@@ -97,7 +97,7 @@ def filter_product(
     found_products = []
     scores = []
     caption_string = " ".join(caption_keyprase)
-
+    print("Captions: - \n", caption_keyprase)
     for (product, name_keywords, desc_keywords) in product_with_keywords:
         name = " ".join(name_keywords).lower()
         desc = " ".join(desc_keywords).lower()
@@ -105,6 +105,8 @@ def filter_product(
         desc_score = beta * similarity_score(caption_string, desc, match_method)
         product["score"] = name_score + desc_score
         found_products.append(product)
+        # if product["domain"] == "Beauty Product":
+            # print("Desc: - \n",product["product_name"], "\n", desc_keywords, "Score: \n -",desc_score*100)
     return sorted(found_products, key=operator.itemgetter("score"), reverse=True)[:5]
 
 
@@ -148,6 +150,10 @@ class ProductSearch:
                 "./data/products.json", "./data/StopList.txt"
             )
 
+            # (description, title, tags) = get_video_meta(api_url)
+            # vid_desc_keywords = get_key_phrases(description, "./data/StopList.txt")
+            # return filter_product(vid_desc_keywords, product_with_keywords, self.match_method)
+
             return filter_product(phrase_list, product_with_keywords, self.match_method)
         except:
             raise Exception("Could not find captions.")
@@ -156,6 +162,6 @@ class ProductSearch:
 
 if __name__ == "__main__":
     captions = ProductSearch(
-        "https://www.youtube.com/watch?v=2xiCVNwhrDU", "Jaccard"
+        "https://www.youtube.com/watch?v=0VwpOJp6CGY", "Jaccard"
     )
     print(captions.get_products())

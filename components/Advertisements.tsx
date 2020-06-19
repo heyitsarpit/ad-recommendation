@@ -6,9 +6,9 @@ interface AdProps {
   productsWithMethod: ProductsMethod;
 }
 
-const List = styled.ul`
-  display: flex;
-  flex-direction: column;
+const List = styled.ol`
+  /* display: flex;
+  flex-direction: column; */
   max-width: 100vh;
   overflow: auto;
   max-height: calc(100vh - 20px);
@@ -17,7 +17,7 @@ const List = styled.ul`
 const MatchingMethod = styled.div`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 1.55em;
   color: ${(props) => props.theme.textPrimary};
 `;
 
@@ -28,8 +28,10 @@ const Score = styled.div`
 `;
 
 const ListItem = styled.li`
-  display: flex;
-  flex-direction: column;
+  display: list-item;
+  /* list-style-position: inside; */
+  /* display: flex;
+  flex-direction: column; */
   padding: 0.2em 0.5em 0.2em 0;
   margin: 0.2em 0.2em 0.2em 0;
   border-bottom: solid 1px ${(props) => props.theme.colorUnfocused};
@@ -50,14 +52,14 @@ const ListItem = styled.li`
 const Anchor = styled.a`
   padding: 0.2em 0.5em 0.2em 0;
   margin: 0.2em 0.2em 0.2em 0;
-  font-size: 0.9em;
+  font-size: 1.2em;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   color: ${(props) => props.theme.textPrimaryDimmed};
 `;
 
 const AnchorBrand = styled(Anchor)`
-  font-size: 1.2em;
+  font-size: 1.7em;
 
   color: ${(props) => props.theme.textSpecial};
 `;
@@ -80,7 +82,7 @@ const Advertisement: React.FC<AdProps> = ({ productsWithMethod }) => {
                         href={`https://www.amazon.in/s?k=${product.brand} ${product.domain}`}
                         rel="noopener noreferrer"
                         target="_blank">
-                        {capitalize(product.brand + " " +  product.domain)}
+                        {capitalize(product.brand + ' ' + product.domain)}
                       </AnchorBrand>
                     </div>
                     <div>
