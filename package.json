@@ -20,7 +20,7 @@
     "prettier": "prettier --write './**/*.{ts,tsx,js,jsx,json,css,html}' --config ./.prettierrc --ignore-path ./.gitignore"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "next": "^9.3.4",
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
